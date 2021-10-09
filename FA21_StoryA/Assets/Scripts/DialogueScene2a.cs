@@ -104,6 +104,8 @@ public void talking(){         // main story function. Players hit next to progr
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
         public void Choice1aFunct(){
+				ArtChar2.SetActive(false);
+				ArtChar1.SetActive(true);
                 Char1speech.text = "";
                 Char1name.text = "Baby Platypus";
                 Char2speech.text = "Let's follow the bigger footprints then!";
@@ -114,6 +116,8 @@ public void talking(){         // main story function. Players hit next to progr
                 allowSpace = true;
         }
         public void Choice1bFunct(){
+				ArtChar2.SetActive(false);
+				ArtChar1.SetActive(true);
                 Char1speech.text = "";
                 Char1name.text = "Baby Platypus";
                 Char2speech.text = "Let's follow the smaller footprints then!";
