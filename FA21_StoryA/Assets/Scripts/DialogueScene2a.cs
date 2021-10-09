@@ -23,10 +23,11 @@ public class DialogueScene2a : MonoBehaviour {
         public GameObject NextScene2Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
-       //public AudioSource audioSource;
+        public AudioSource audioSource;
         private bool allowSpace = true;
 
 void Start(){         // initial visibility settings
+		
         dialogue.SetActive(false);
         ArtChar1.SetActive(false);
 		ArtChar2.SetActive(false);
@@ -129,9 +130,9 @@ public void talking(){         // main story function. Players hit next to progr
         }
 
         public void SceneChange1(){
-               SceneManager.LoadScene("Scene2a");
+               SceneManager.LoadScene("Scene3a");
         }
         public void SceneChange2(){
-                SceneManager.LoadScene("Scene2b");
+                SceneManager.LoadScene("Scene3b");
         }
 }
