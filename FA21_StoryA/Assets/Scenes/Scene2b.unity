@@ -232,7 +232,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14, y: -12}
+  m_AnchoredPosition: {x: 107, y: -7}
   m_SizeDelta: {x: 1000, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &178209849
@@ -268,7 +268,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Speech2
+  m_Text: 
 --- !u!222 &178209850
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -471,7 +471,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14, y: -14}
+  m_AnchoredPosition: {x: 107, y: -7}
   m_SizeDelta: {x: 1000, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &368727609
@@ -507,7 +507,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Speech1
+  m_Text: 
 --- !u!222 &368727610
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -528,7 +528,7 @@ GameObject:
   - component: {fileID: 404556506}
   - component: {fileID: 404556505}
   m_Layer: 5
-  m_Name: ArtChar1
+  m_Name: Owl_Character_Art
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -550,7 +550,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -222, y: 0}
+  m_AnchoredPosition: {x: -222, y: -26}
   m_SizeDelta: {x: 1280, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &404556505
@@ -627,7 +627,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 462, y: -249}
+  m_AnchoredPosition: {x: 322, y: -272}
   m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &416806878
@@ -673,7 +673,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 416806879}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 760884968}
+        m_TargetAssemblyTypeName: DialogueScene2b, Assembly-CSharp
+        m_MethodName: talking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &416806879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -873,7 +885,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 678639088}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 760884968}
+        m_TargetAssemblyTypeName: DialogueScene2b, Assembly-CSharp
+        m_MethodName: Choice1bFunct
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &678639088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -924,7 +948,7 @@ GameObject:
   - component: {fileID: 760884965}
   - component: {fileID: 760884964}
   - component: {fileID: 760884963}
-  - component: {fileID: 760884967}
+  - component: {fileID: 760884968}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1022,7 +1046,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &760884967
+--- !u!114 &760884968
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1031,7 +1055,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 760884962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f44be6bfe0472a4aa75efff6f657fc5, type: 3}
+  m_Script: {fileID: 11500000, guid: f50577aaca73c478ca999b051c0ce016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   primeInt: 1
@@ -1042,7 +1066,8 @@ MonoBehaviour:
   Char3name: {fileID: 0}
   Char3speech: {fileID: 0}
   dialogue: {fileID: 54364705}
-  ArtChar1: {fileID: 404556503}
+  ArtChar1: {fileID: 1533263729}
+  ArtChar2: {fileID: 404556503}
   ArtBG1: {fileID: 1878172820}
   Choice1a: {fileID: 1302032777}
   Choice1b: {fileID: 678639085}
@@ -1061,7 +1086,7 @@ GameObject:
   - component: {fileID: 808108813}
   - component: {fileID: 808108812}
   m_Layer: 5
-  m_Name: Char1Name
+  m_Name: Baby Platypus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1083,7 +1108,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 64, y: -36}
+  m_AnchoredPosition: {x: 2.8, y: 1.8}
   m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &808108812
@@ -1113,13 +1138,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CHAR1
+  m_Text: 
 --- !u!222 &808108813
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1140,7 +1165,7 @@ GameObject:
   - component: {fileID: 845607191}
   - component: {fileID: 845607190}
   m_Layer: 5
-  m_Name: Char2Name
+  m_Name: Owl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1162,7 +1187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 62, y: -8}
+  m_AnchoredPosition: {x: -6.4, y: 0.9}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &845607190
@@ -1192,13 +1217,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CHAR2
+  m_Text: 
 --- !u!222 &845607191
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1277,7 +1302,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Scream into hole
+  m_Text: Scream Into Hole
 --- !u!222 &963951419
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1447,7 +1472,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1302032780}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 760884968}
+        m_TargetAssemblyTypeName: DialogueScene2b, Assembly-CSharp
+        m_MethodName: Choice1aFunct
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1302032780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1621,7 +1658,7 @@ GameObject:
   - component: {fileID: 1533263732}
   - component: {fileID: 1533263731}
   m_Layer: 5
-  m_Name: ArtChar2
+  m_Name: BB_Platypus_Character_Art
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1643,7 +1680,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 544, y: -14}
+  m_AnchoredPosition: {x: 544, y: -30}
   m_SizeDelta: {x: 1280, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1533263731
@@ -1831,7 +1868,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Turn back
+  m_Text: Turn Back
 --- !u!222 &1833784178
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1852,7 +1889,7 @@ GameObject:
   - component: {fileID: 1878172823}
   - component: {fileID: 1878172822}
   m_Layer: 5
-  m_Name: ArtBG
+  m_Name: ArtBG1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
