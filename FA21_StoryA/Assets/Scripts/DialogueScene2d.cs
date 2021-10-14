@@ -65,7 +65,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "There's snoring coming from inside!";
                 Char2name.text = "";
                 Char2speech.text = "";
-              
+
         }
 
        else if (primeInt == 4){
@@ -152,15 +152,32 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "Oh don’t worry about it! Infact, I should be thanking you! I almost slept through breakfast!";
 	   }
 	   else if (primeInt == 109){  //this is where you can finish the script copy and paste and add 1 to prime int
-
+                ArtChar2.SetActive(true);
+                ArtChar1.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
+                Char2name.text = "Owl";
+                Char2speech.text = "By the way I must warn you! Beware of the snakes in this forest, they love to come out and hunt for food after a storm, especially after one like last night.";
 	   }
-	   //copy and paste the above here
-	    else if (primeInt == 110){ //this will be your last line
-		        ArtChar2.SetActive(true);
+     else if (primeInt == 110){  //this is where you can finish the script copy and paste and add 1 to prime int
+                ArtChar2.SetActive(true);
+                ArtChar1.SetActive(false);
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Owl";
+                Char2speech.text = "But don't fret! Snakes hate loud noises and vibrations, you can always scare off snakes by smacking that tail of yours on the ground really hard.";
+    }
+    else if (primeInt == 111){  //this is where you can finish the script copy and paste and add 1 to prime int
+                ArtChar1.SetActive(true);
+                ArtChar2.SetActive(false);
+                 Char1name.text = "Baby Platypus";
+                 Char1speech.text = "(GULP) Thank you for the warning Mister Owl...I'll remember what you said.";
+                 Char2name.text = "";
+                 Char2speech.text = "";
+    }
+          //copy and paste the above here
+	    else if (primeInt == 112){ //this will be your last line
+		            ArtChar2.SetActive(true);
                 ArtChar1.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
