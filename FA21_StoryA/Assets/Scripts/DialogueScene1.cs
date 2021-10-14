@@ -140,9 +140,9 @@ public void talking(){         // main story function. Players hit next to progr
                SceneManager.LoadScene("Scene2a");
         }
         public void SceneChange2(){
-                SceneManager.LoadScene("Scene2b");
+                SceneManager.LoadScene("Scene2c");
         }
 		 public void SceneChange3(){
-                SceneManager.LoadScene("Scene2b");
+                SceneManager.LoadScene("Scene2d");
         }
 }

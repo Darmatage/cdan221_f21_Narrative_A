@@ -118,9 +118,9 @@ public void talking(){         // main story function. Players hit next to progr
         }
 
         public void SceneChange1(){
-               SceneManager.LoadScene("Scene2a");
+               SceneManager.LoadScene("Scene5a");
         }
         public void SceneChange2(){
-                SceneManager.LoadScene("Scene2b");
+                SceneManager.LoadScene("Scene1");
         }
 }
