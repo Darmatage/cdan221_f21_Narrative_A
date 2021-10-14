@@ -159,7 +159,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2name.text = "Owl";
                 Char2speech.text = "By the way I must warn you! Beware of the snakes in this forest, they love to come out and hunt for food after a storm, especially after one like last night.";
 	   }
-     else if (primeInt == 110){  //this is where you can finish the script copy and paste and add 1 to prime int
+     else if (primeInt == 110){  
                 ArtChar2.SetActive(true);
                 ArtChar1.SetActive(false);
                 Char1name.text = "";
@@ -167,15 +167,15 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2name.text = "Owl";
                 Char2speech.text = "But don't fret! Snakes hate loud noises and vibrations, you can always scare off snakes by smacking that tail of yours on the ground really hard.";
     }
-    else if (primeInt == 111){  //this is where you can finish the script copy and paste and add 1 to prime int
+    else if (primeInt == 111){ 
                 ArtChar1.SetActive(true);
                 ArtChar2.SetActive(false);
                  Char1name.text = "Baby Platypus";
-                 Char1speech.text = "(GULP) Thank you for the warning Mister Owl...I'll remember what you said.";
+                 Char1speech.text = "*Gulp* Thank you for the warning Mister Owl...I'll remember what you said.";
                  Char2name.text = "";
                  Char2speech.text = "";
     }
-          //copy and paste the above here
+
 	    else if (primeInt == 112){ //this will be your last line
 		            ArtChar2.SetActive(true);
                 ArtChar1.SetActive(false);
@@ -225,9 +225,10 @@ public void talking(){         // main story function. Players hit next to progr
         }
 
         public void SceneChange1(){
-               SceneManager.LoadScene("Scene2a");
+               SceneManager.LoadScene("Scene1");
         }
-        public void SceneChange2(){
-                SceneManager.LoadScene("Scene2b");
+     
+	  public void SceneChange2(){
+               SceneManager.LoadScene("Scene2");
         }
 }
