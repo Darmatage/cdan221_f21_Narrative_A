@@ -22,7 +22,7 @@ public class DialogueScene2d : MonoBehaviour {
         public GameObject NextScene1Button;
         public GameObject NextScene2Button;
         public GameObject nextButton;
-       //public GameHandler gameHandler;
+        public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
 
@@ -36,6 +36,11 @@ void Start(){         // initial visibility settings
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
+		
+		if (gameHandler.isOwl()){
+			primeInt = 39;
+		}
+		
    }
 
 void Update(){         // use spacebar as Next button
@@ -79,6 +84,29 @@ public void talking(){         // main story function. Players hit next to progr
                 Choice1a.SetActive(true); // function Choice1aFunct()
                 Choice1b.SetActive(true); // function Choice1bFunct()
         }
+		
+		
+		//been to owl
+		else if (primeInt == 40){
+			    ArtChar1.SetActive(true);
+                dialogue.SetActive(true);
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Owl";
+                Char2speech.text = "Didn't we talk already?";
+        }
+		
+		else if (primeInt == 41){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Owl";
+                Char2speech.text = "Let me sleep!";
+				nextButton.SetActive(false);
+                allowSpace = false;
+                NextScene2Button.SetActive(true);
+        }
+		
+		
 // ENCOUNTER AFTER CHOICE #1
        else if (primeInt == 100){
                ArtChar1.SetActive(true);
@@ -211,6 +239,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Choice1b.SetActive(false);
                 nextButton.SetActive(true);
                 allowSpace = true;
+				gameHandler.UpdateOwl();
         }
         public void Choice1bFunct(){
                 Char1name.text = "Baby Platypus";

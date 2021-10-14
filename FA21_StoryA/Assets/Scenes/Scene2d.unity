@@ -1074,6 +1074,7 @@ MonoBehaviour:
   NextScene1Button: {fileID: 1662000746}
   NextScene2Button: {fileID: 1735785797}
   nextButton: {fileID: 416806876}
+  gameHandler: {fileID: 1613254883}
 --- !u!1 &808108810
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,6 +1801,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1533263729}
   m_CullTransparentMesh: 1
+--- !u!114 &1613254883 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7376877549875853647, guid: 83227c03969f995428ee04a5fb3b5b51, type: 3}
+  m_PrefabInstance: {fileID: 1359766323}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f571fdcd93d4643a846861f22fd1bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1631951697
 GameObject:
   m_ObjectHideFlags: 0

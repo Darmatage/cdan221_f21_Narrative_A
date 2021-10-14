@@ -7,7 +7,14 @@ using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour{
 
-        public static int playerStat;
+        public static bool beenToOwl = false;
+		public static bool beenToBear = false;
+		public static bool beenToFox = false;
+		public static bool beenToRabbit = false;
+		public static bool gotBearHelp = false;
+		
+		
+		
         //public GameObject textGameObject;
 
         //void Start () { UpdateScore (); }
@@ -18,11 +25,53 @@ public class GameHandler : MonoBehaviour{
                 }
         }
 
-        public void AddPlayerStat(int amount){
-                playerStat += amount;
-                Debug.Log("Current Player Stat = " + playerStat);
-        //      UpdateScore ();
+//assign true to static variables
+		public void UpdateOwl(){
+                beenToOwl = true;
+				Debug.Log("beenToOwl = " + beenToOwl);
         }
+		
+		public void UpdateBear(){
+                beenToBear = true;
+				Debug.Log("beenToBear = " + beenToBear);
+        }
+		
+		public void UpdateFox(){
+                beenToFox = true;
+				Debug.Log("beenToFox = " + beenToFox);
+        }
+		
+		public void UpdateRabbit(){
+                beenToRabbit = true;
+				Debug.Log("beenToRabbit = " + beenToRabbit);
+        }
+
+		public void UpdateBearHelp(){
+                gotBearHelp = true;
+				Debug.Log("BearHelp = " + gotBearHelp);
+        }
+
+//return static variables 
+		public bool isOwl(){
+            return beenToOwl;
+        }
+		
+		public bool isBear(){
+            return beenToBear;
+        }
+		
+		public bool isFox(){
+			return beenToFox;
+        }
+		
+		public bool isRabbit(){
+			return beenToRabbit;
+        }
+		
+		public bool isBearHelp(){
+			return gotBearHelp;
+        }
+
 
         //void UpdateScore () {
         //        Text scoreTemp = textGameObject.GetComponent<Text>();
