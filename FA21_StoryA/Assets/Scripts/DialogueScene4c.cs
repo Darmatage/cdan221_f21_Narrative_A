@@ -304,7 +304,7 @@ public void talking(){         // main story function. Players hit next to progr
 				Char4speech.text = "";
         }
 		else if (primeInt == 27){
-               SceneChange1();
+               SceneChange2();
         }
 		
 		
