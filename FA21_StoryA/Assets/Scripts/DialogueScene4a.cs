@@ -54,20 +54,20 @@ public void talking(){         // main story function. Players hit next to progr
         else if (primeInt == 2){
                 ArtChar2.SetActive(true);
                 dialogue.SetActive(true);
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "There seems to be some scratches on the cave walls…";
         }
        else if (primeInt ==3){
 				ArtChar2.SetActive(false);
 				ArtChar1.SetActive(true);
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "And I can hear growling!";
         }
        else if (primeInt == 4){
 		   
                 ArtChar1.SetActive(false);
 				ArtChar2.SetActive(true);
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Should I keep going?";
                 nextButton.SetActive(false);
                 allowSpace = false;
@@ -77,7 +77,7 @@ public void talking(){         // main story function. Players hit next to progr
 // ENCOUNTER AFTER CHOICE #1
   
        else if (primeInt == 100){
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "I'll keep going!";
                 nextButton.SetActive(false);
                 allowSpace = false;
@@ -85,7 +85,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 
        else if (primeInt == 200){
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Let's turn back...";
                 nextButton.SetActive(false);
                 allowSpace = false;
@@ -97,7 +97,7 @@ public void talking(){         // main story function. Players hit next to progr
         public void Choice1aFunct(){
 				ArtChar2.SetActive(false);
 				ArtChar1.SetActive(true);
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "I'll keep going!";
                 primeInt = 99;
                 Choice1a.SetActive(false);
@@ -108,7 +108,7 @@ public void talking(){         // main story function. Players hit next to progr
         public void Choice1bFunct(){
                ArtChar2.SetActive(false);
 				ArtChar1.SetActive(true);
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Let's turn back...";
                 primeInt = 199;
                 Choice1a.SetActive(false);

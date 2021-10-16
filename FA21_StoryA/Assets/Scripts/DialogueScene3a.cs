@@ -55,7 +55,7 @@ public void talking(){         // main story function. Players hit next to progr
                 ArtChar1.SetActive(true); //baby platypus happy
                 dialogue.SetActive(true);
 				Char2speech.text = "";
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
 				Char1speech.text = "Woah! A cave!";
         }
        else if (primeInt ==3){
@@ -81,7 +81,7 @@ public void talking(){         // main story function. Players hit next to progr
       
 // ENCOUNTER AFTER CHOICE #1       
        else if (primeInt == 100){
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "";
                 Char2speech.text = "I'll explore the cave!";
                 nextButton.SetActive(false);
@@ -90,7 +90,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 
        else if (primeInt == 200){
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "";
                 Char2speech.text = "I should turn back... It's probably dangerous";
 				nextButton.SetActive(false);
@@ -104,7 +104,7 @@ public void talking(){         // main story function. Players hit next to progr
         public void Choice1aFunct(){
 				ArtChar1.SetActive(true);	//happy
 				ArtChar2.SetActive(false);	//thinking
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "";
                 Char2speech.text = "I'll explore the cave!";
                 primeInt = 99;
@@ -114,7 +114,7 @@ public void talking(){         // main story function. Players hit next to progr
                 allowSpace = true;
         }
         public void Choice1bFunct(){
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "";
                 Char2speech.text = "I should turn back... It's probably dangerous";
                 primeInt = 199;

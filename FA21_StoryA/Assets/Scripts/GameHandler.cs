@@ -13,6 +13,7 @@ public class GameHandler : MonoBehaviour{
 		public static bool beenToRabbit = false;
 		public static bool gotBearHelp = false;
 	    public static bool ateBerries = false;
+		public static bool newDiscovery = false;
 		
 		
         //public GameObject textGameObject;
@@ -55,6 +56,11 @@ public class GameHandler : MonoBehaviour{
 				Debug.Log("BearHelp = " + gotBearHelp);
         }
 		
+		public void UpdateNewDiscovery(){
+                newDiscovery = true;
+				Debug.Log("NewDiscovery = " + newDiscovery);
+        }
+		
 
 //return static variables 
 		public bool isOwl(){
@@ -79,6 +85,10 @@ public class GameHandler : MonoBehaviour{
 		
 		public bool isBerries(){
 			return ateBerries;
+        }
+		
+		public bool isNewDiscovery(){
+			return newDiscovery;
         }
 
 

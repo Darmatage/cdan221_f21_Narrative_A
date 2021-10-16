@@ -42,6 +42,12 @@ void Start(){         // initial visibility settings
 		NextScene3Button.SetActive(false);
         NextScene4Button.SetActive(false);
         nextButton.SetActive(true);
+		
+		if (gameHandler.isBear() || gameHandler.isFox()){
+			if (!gameHandler.isNewDiscovery()){
+				    primeInt = 10;
+			}
+			    }
 		 
    }
 
@@ -61,12 +67,12 @@ public void talking(){         // main story function. Players hit next to progr
         else if (primeInt == 2){
                ArtChar1.SetActive(true);
                 dialogue.SetActive(true);
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "I need to find Mama.";
                 
         }
        else if (primeInt ==3){
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = " Where should I look?";
 				// Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
@@ -85,7 +91,14 @@ public void talking(){         // main story function. Players hit next to progr
 				if (gameHandler.isBear() || gameHandler.isFox()){
 				    Choice1d.SetActive(true);
 			    }
-			
+			 else if (primeInt == 11){
+                ArtChar1.SetActive(true);
+                dialogue.SetActive(true);
+                Char1name.text = "BABY PLATYPUS";
+                Char1speech.text = "The river is now shallow enough to cross!";
+				primeInt = 1;
+                
+        }
 						
                 
         }
@@ -93,30 +106,30 @@ public void talking(){         // main story function. Players hit next to progr
 // ENCOUNTER AFTER CHOICE #1
 
        else if (primeInt == 100){
-                Char1name.text = "Baby Platypus";
-                Char1speech.text = "Let's follow the footprints!";
+                Char1name.text = "BABY PLATYPUS";
+                Char1speech.text = "Here I come Mama!";
                 nextButton.SetActive(false);
                 allowSpace = false;
                 NextScene1Button.SetActive(true);
         }
 
        else if (primeInt == 200){
-                Char1name.text = "Baby Platypus";
-                Char1speech.text = "Let's go to the bush.";
+                Char1name.text = "BABY PLATYPUS";
+                Char1speech.text = "Here I come Mama!";
 				nextButton.SetActive(false);
 				allowSpace = false;
                 NextScene2Button.SetActive(true);
         }
        else if (primeInt == 300){
-                Char1name.text = "Baby Platypus";
-                Char1speech.text = "Let's go to the tree hole";
+                Char1name.text = "BABY PLATYPUS";
+                Char1speech.text = "Here I come Mama!";
                 nextButton.SetActive(false);
                 allowSpace = false;
                 NextScene3Button.SetActive(true);
         }
 		else if (primeInt == 400){
-                Char1name.text = "Baby Platypus";
-                Char1speech.text = "Let's go across the river";
+                Char1name.text = "BABY PLATYPUS";
+                Char1speech.text = "Here I come Mama!";
                 nextButton.SetActive(false);
                 allowSpace = false;
                 NextScene4Button.SetActive(true);
@@ -125,7 +138,7 @@ public void talking(){         // main story function. Players hit next to progr
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
         public void Choice1aFunct(){
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Let's follow the footprints!";
                 primeInt = 99;
                 Choice1a.SetActive(false);
@@ -136,7 +149,7 @@ public void talking(){         // main story function. Players hit next to progr
                 allowSpace = true;
         }
         public void Choice1bFunct(){
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Let's go to the bush.";
                 primeInt = 199;
                 Choice1a.SetActive(false);
@@ -147,7 +160,7 @@ public void talking(){         // main story function. Players hit next to progr
                 allowSpace = true;
         }
 		public void Choice1cFunct(){
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Let's go to the tree hole";
                 primeInt = 299;
                 Choice1a.SetActive(false);
@@ -158,7 +171,7 @@ public void talking(){         // main story function. Players hit next to progr
                 allowSpace = true;
         }
 		public void Choice1dFunct(){
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Let's go across the river";
                 primeInt = 399;
                 Choice1a.SetActive(false);

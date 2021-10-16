@@ -56,7 +56,7 @@ public void talking(){         // main story function. Players hit next to progr
 				ArtChar1.SetActive(true);
                 dialogue.SetActive(true);
 				Char2speech.text = "";
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Mama?";
                 
         }
@@ -88,7 +88,7 @@ public void talking(){         // main story function. Players hit next to progr
 // ENCOUNTER AFTER CHOICE #1
        else if (primeInt == 100){
 				Char1speech.text = "";
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char2speech.text = "";
 				nextButton.SetActive(false);
                 allowSpace = false;
@@ -98,7 +98,7 @@ public void talking(){         // main story function. Players hit next to progr
 
        else if (primeInt == 200){
                 Char1speech.text = "";
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char2speech.text = "";
 				nextButton.SetActive(false);
                 allowSpace = false;
@@ -112,7 +112,7 @@ public void talking(){         // main story function. Players hit next to progr
 				ArtChar2.SetActive(false);
 				ArtChar1.SetActive(true);
                 Char1speech.text = "";
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char2speech.text = "Let's follow the bigger footprints then!";
                 primeInt = 99;
                 Choice1a.SetActive(false);
@@ -124,7 +124,7 @@ public void talking(){         // main story function. Players hit next to progr
 				ArtChar2.SetActive(false);
 				ArtChar1.SetActive(true);
                 Char1speech.text = "";
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char2speech.text = "Let's follow the smaller footprints then!";
                 primeInt = 199;
                 Choice1a.SetActive(false);

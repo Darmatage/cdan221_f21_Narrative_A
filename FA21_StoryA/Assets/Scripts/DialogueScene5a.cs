@@ -56,7 +56,7 @@ public void talking(){         // main story function. Players hit next to progr
         else if (primeInt == 2){
                 ArtChar2.SetActive(true);
                 dialogue.SetActive(true);
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char2speech.text = "Made it to the back of the...";
                 Char2name.text = "";
                 Char1speech.text = "";
@@ -66,7 +66,7 @@ public void talking(){         // main story function. Players hit next to progr
        else if (primeInt ==3){
 				ArtChar2.SetActive(false);
 				ArtChar1.SetActive(true);
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "AH!";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -78,13 +78,13 @@ public void talking(){         // main story function. Players hit next to progr
 				Char1name.text = "";
                 Char1speech.text = "";
 				Char2speech.text = "";
-                Char2name.text = "Bear";
+                Char2name.text = "BEAR";
                 Char3speech.text = "...";
         }
        else if (primeInt == 5){
                 ArtChar3.SetActive(false);
 				ArtChar1.SetActive(true);
-				Char1name.text = "Baby Platypus";
+				Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Please don’t eat me sir…";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -96,34 +96,34 @@ public void talking(){         // main story function. Players hit next to progr
 				Char1name.text = "";
                 Char1speech.text = "";
 				Char2speech.text = "";
-                Char2name.text = "Bear";
+                Char2name.text = "BEAR";
                 Char3speech.text = "Ha. Ha. Ha. Ha.";
         }
        else if (primeInt ==7){
 				Char1name.text = "";
                 Char1speech.text = "";
 				Char2speech.text = "";
-                Char2name.text = "Bear";
+                Char2name.text = "BEAR";
                 Char3speech.text = "Relax little one, I am a vegetarian.";
         }
 		 else if (primeInt ==8){
 				Char1name.text = "";
                 Char1speech.text = "";
 				Char2speech.text = "";
-                Char2name.text = "Bear";
+                Char2name.text = "BEAR";
                 Char3speech.text = "On a strict diet of Honey, Berries and Grass";
         }
 		else if (primeInt ==9){
 			    ArtChar3.SetActive(false);
 				ArtChar2.SetActive(true);
-				Char1name.text = "Baby Platypus";
+				Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "";
 				Char2speech.text = "Whew! That's a relief.";
                 Char2name.text = "";
                 Char3speech.text = "";
         }
 		else if (primeInt ==10){
-				Char1name.text = "Baby Platypus";
+				Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "";
 				Char2speech.text = "I thought i was a goner for sure.";
                 Char2name.text = "";
@@ -132,14 +132,14 @@ public void talking(){         // main story function. Players hit next to progr
 		else if (primeInt ==11){
 			    ArtChar2.SetActive(false);
 			 	ArtChar1.SetActive(true);
-				Char1name.text = "Baby Platypus";
+				Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Have you seen my Mama?";
 				Char2speech.text = "";
                 Char2name.text = "";
                 Char3speech.text = "";
         }
 		else if (primeInt ==12){
-				Char1name.text = "Baby Platypus";
+				Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "She looks just like me, but slightly bigger!";
 				Char2speech.text = "";
                 Char2name.text = "";
@@ -151,27 +151,27 @@ public void talking(){         // main story function. Players hit next to progr
 				Char1name.text = "";
                 Char1speech.text = "";
 				Char2speech.text = "";
-                Char2name.text = "Bear";
+                Char2name.text = "BEAR";
                 Char3speech.text = "Unfortunately, I haven’t seen your Mama";
         }
 		else if (primeInt ==14){
 				Char1name.text = "";
                 Char1speech.text = "";
 				Char2speech.text = "";
-                Char2name.text = "Bear";
+                Char2name.text = "BEAR";
                 Char3speech.text = "In fact since i've reached this old age, I haven’t been able to see much of anything";
         }
 		else if (primeInt ==15){
 				Char1name.text = "";
                 Char1speech.text = "";
 				Char2speech.text = "";
-                Char2name.text = "Bear";
+                Char2name.text = "BEAR";
                 Char3speech.text = "INCLUDING HOW TO GET OUT OF THIS CAVE!";
         }
 		else if (primeInt ==16){
 				ArtChar3.SetActive(false);
 			 	ArtChar2.SetActive(true);
-				Char1name.text = "Baby Platypus";
+				Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "";
 				Char2speech.text = "So that’s where all the growling came from...";
                 Char2name.text = "";
@@ -183,34 +183,34 @@ public void talking(){         // main story function. Players hit next to progr
 				Char1name.text = "";
                 Char1speech.text = "";
 				Char2speech.text = "";
-                Char2name.text = "Bear";
+                Char2name.text = "BEAR";
                 Char3speech.text = "HEY!";
         }
 		else if (primeInt ==18){
 				Char1name.text = "";
                 Char1speech.text = "";
 				Char2speech.text = "";
-                Char2name.text = "Bear";
+                Char2name.text = "BEAR";
                 Char3speech.text = "You're pretty young...";
         }
 		else if (primeInt ==19){
 				Char1name.text = "";
                 Char1speech.text = "";
 				Char2speech.text = "";
-                Char2name.text = "Bear";
+                Char2name.text = "BEAR";
                 Char3speech.text = "Must have that good eyesight...";
         }
 		else if (primeInt ==20){
 				Char1name.text = "";
                 Char1speech.text = "";
 				Char2speech.text = "";
-                Char2name.text = "Bear";
+                Char2name.text = "BEAR";
                 Char3speech.text = "Do you think you can help me out of this cave?";
         }
 		else if (primeInt ==21){
 			    ArtChar3.SetActive(false);
 			 	ArtChar2.SetActive(true);
-				Char1name.text = "Baby Platypus";
+				Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "";
 				Char2speech.text = "Should I help him?";
                 Char2name.text = "";
@@ -228,20 +228,20 @@ public void talking(){         // main story function. Players hit next to progr
 				Char1name.text = "";
                 Char1speech.text = "";
 				Char2speech.text = "";
-                Char2name.text = "Bear";
+                Char2name.text = "BEAR";
                 Char3speech.text = "OH, THANK YOU SO MUCH!!!!";
         }
 		else if (primeInt == 101){
 				Char1name.text = "";
                 Char1speech.text = "";
 				Char2speech.text = "";
-                Char2name.text = "Bear";
+                Char2name.text = "BEAR";
                 Char3speech.text = "You have no idea how long I’ve been stuck in this cave...";
         }
        else if (primeInt == 102){
                 ArtChar3.SetActive(false);
 			 	ArtChar1.SetActive(true);
-				Char1name.text = "Baby Platypus";
+				Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Let’s get you out of here then!";
 				Char2speech.text = "";
                 Char2name.text = "";
@@ -252,7 +252,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 
        else if (primeInt == 200){
-                Char1name.text = "Baby Playpus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "You’re a stranger and I don’t really know if I can trust you enough to travel through this dark cave with you...";
 				Char2speech.text = "";
                 Char2name.text = "";
@@ -264,20 +264,20 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
 				Char2speech.text = "";
-                Char2name.text = "Bear";
+                Char2name.text = "BEAR";
                 Char3speech.text = "I understand…";
         }
 		 else if (primeInt == 202){
                 Char1name.text = "";
                 Char1speech.text = "";
 				Char2speech.text = "";
-                Char2name.text = "Bear";
+                Char2name.text = "BEAR";
                 Char3speech.text = "Good luck finding your Mama…";
         }
        else if (primeInt == 203){
                 ArtChar3.SetActive(false);
 			 	ArtChar1.SetActive(true);
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Bye...";
 				Char2speech.text = "";
                 Char2name.text = "";
@@ -292,7 +292,7 @@ public void talking(){         // main story function. Players hit next to progr
         public void Choice1aFunct(){
                 ArtChar2.SetActive(false);
 			 	ArtChar1.SetActive(true);
-				Char1name.text = "Baby Playpus";
+				Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Sure! I’ll help you get out of this cave!";
 				Char2speech.text = "";
                 Char2name.text = "";
@@ -304,7 +304,7 @@ public void talking(){         // main story function. Players hit next to progr
                 allowSpace = true;
         }
         public void Choice1bFunct(){
-                Char1name.text = "Baby Playpus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "To be honest...";
 				Char2speech.text = "";
                 Char2name.text = "";

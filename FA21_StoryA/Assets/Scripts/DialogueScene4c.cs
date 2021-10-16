@@ -19,6 +19,7 @@ public class DialogueScene4c : MonoBehaviour {
 		public GameObject ArtChar2;
 		public GameObject ArtChar3;
 		public GameObject ArtChar4;
+		public GameObject ArtBam;
         public GameObject ArtBG1;
         public GameObject nextButton;
         public GameHandler gameHandler;
@@ -31,6 +32,7 @@ void Start(){         // initial visibility settings
 		ArtChar2.SetActive(false);
 		ArtChar3.SetActive(false);
 		ArtChar4.SetActive(false);
+		ArtBam.SetActive(false);
         ArtBG1.SetActive(true);
         nextButton.SetActive(true);
    }
@@ -169,6 +171,11 @@ public void talking(){         // main story function. Players hit next to progr
 				Char3speech.text = "";
 				Char3name.text = "SNAKE";
 				Char4speech.text = "Stop moving.";
+				
+			if (gameHandler.isRabbit()){
+				primeInt = 22;
+			}
+	
         }
 		else if (primeInt == 13){
                 ArtChar3.SetActive(true);
@@ -249,12 +256,68 @@ public void talking(){         // main story function. Players hit next to progr
                 
         }
 		
+		//if player has talked to owl
+		else if (primeInt == 23){
+			    ArtBam.SetActive(true);
+                ArtChar1.SetActive(true);
+                ArtChar4.SetActive(false);
+                Char1name.text = "BABY PLATYPUS";
+                Char1speech.text = ""; 
+                Char2speech.text = "TAKE THAT!";
+				Char2name.text = "";
+				Char3speech.text = "";
+				Char3name.text = "";
+				Char4speech.text = "";
+        }
+		else if (primeInt == 24){
+			    ArtBam.SetActive(false);
+                ArtChar1.SetActive(false);
+                ArtChar4.SetActive(true);
+                Char1name.text = "";
+                Char1speech.text = ""; 
+                Char2speech.text = "";
+				Char2name.text = "";
+				Char3speech.text = "";
+				Char3name.text = "SNAKE";
+				Char4speech.text = "AHH!";
+        }
+		else if (primeInt == 25){
+                ArtChar4.SetActive(false);
+                ArtChar3.SetActive(true);
+                Char1name.text = "";
+                Char1speech.text = ""; 
+                Char2speech.text = "";
+				Char2name.text = "RABBIT";
+				Char3speech.text = "WHERE ARE YOU GOING! But wait! Our deal...";
+				Char3name.text = "";
+				Char4speech.text = "";
+        }
+		else if (primeInt == 26){
+                ArtChar3.SetActive(false);
+                ArtChar2.SetActive(true);
+                Char1name.text = "BABY PLATYPUS";
+                Char1speech.text = ""; 
+                Char2speech.text = "Now's my chance to get out of here!";
+				Char2name.text = "";
+				Char3speech.text = "";
+				Char3name.text = "";
+				Char4speech.text = "";
+        }
+		else if (primeInt == 27){
+               SceneChange1();
+        }
+		
+		
      }
 
 
 
         public void SceneChange1(){
                SceneManager.LoadScene("Scene_Lose1");
+        }
+		
+		 public void SceneChange2(){
+               SceneManager.LoadScene("Scene1");
         }
      
 }
