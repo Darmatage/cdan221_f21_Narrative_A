@@ -172,7 +172,7 @@ public void talking(){         // main story function. Players hit next to progr
 				Char3name.text = "SNAKE";
 				Char4speech.text = "Stop moving.";
 				
-			if (gameHandler.isRabbit()){
+			if (gameHandler.isOwl()){
 				primeInt = 22;
 			}
 	
