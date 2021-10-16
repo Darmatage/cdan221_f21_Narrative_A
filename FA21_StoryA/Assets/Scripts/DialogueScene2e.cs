@@ -32,7 +32,7 @@ public class DialogueScene2e : MonoBehaviour {
 		public GameObject Choice1e;
         public GameObject Choice1f;
         public GameObject nextButton;
-       //public GameHandler gameHandler;
+        public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
 
@@ -139,7 +139,10 @@ public void talking(){         // main story function. Players hit next to progr
                 allowSpace = false;
                 Choice1a.SetActive(true); // function Choice1aFunct()
                 Choice1b.SetActive(true); // function Choice1bFunct()
-				// make if statement here Choice1c.SetActive(true); // function Choice1cFunct()
+				if (gameHandler.isBearHelp()){
+			     Choice1c.SetActive(true); // function Choice1cFunct()
+				}
+
         }
       
 // ENCOUNTER AFTER CHOICE #1
@@ -200,8 +203,12 @@ public void talking(){         // main story function. Players hit next to progr
 				 nextButton.SetActive(false);
                 allowSpace = false;
                 Choice1d.SetActive(true); // function Choice1dFunct()
-                //if statement Choice1e.SetActive(true); // function Choice1eFunct()
-				//if statement Choice1f.SetActive(true); // function Choice1fFunct()
+				 if (gameHandler.isBerries()){
+               Choice1e.SetActive(true); // function Choice1eFunct()
+				 }
+				  if (gameHandler.isOwl()){
+              Choice1f.SetActive(true); // function Choice1fFunct()
+				 }
                 
         }
 

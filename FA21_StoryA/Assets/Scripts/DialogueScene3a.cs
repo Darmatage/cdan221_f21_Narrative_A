@@ -22,7 +22,7 @@ public class DialogueScene3a : MonoBehaviour {
         public GameObject NextScene1Button;
         public GameObject NextScene2Button;
         public GameObject nextButton;
-       //public GameHandler gameHandler;
+       public GameHandler gameHandler;
        public AudioSource audioSource;
         private bool allowSpace = true;
 

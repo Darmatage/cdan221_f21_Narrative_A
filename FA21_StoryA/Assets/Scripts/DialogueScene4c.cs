@@ -21,7 +21,7 @@ public class DialogueScene4c : MonoBehaviour {
 		public GameObject ArtChar4;
         public GameObject ArtBG1;
         public GameObject nextButton;
-       //public GameHandler gameHandler;
+        public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
 

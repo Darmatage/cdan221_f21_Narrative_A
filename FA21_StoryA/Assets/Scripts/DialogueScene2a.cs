@@ -22,7 +22,7 @@ public class DialogueScene2a : MonoBehaviour {
         public GameObject NextScene1Button;
         public GameObject NextScene2Button;
         public GameObject nextButton;
-       //public GameHandler gameHandler;
+        public GameHandler gameHandler;
         public AudioSource audioSource;
         private bool allowSpace = true;
 
@@ -77,8 +77,12 @@ public void talking(){         // main story function. Players hit next to progr
 				// Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
-                Choice1a.SetActive(true); // function Choice1aFunct()
+				if (gameHandler.isBear() == false){
+			   Choice1a.SetActive(true); // function Choice1aFunct()
+		}
+                 if (gameHandler.isFox()== false){
                 Choice1b.SetActive(true); // function Choice1bFunct()
+				 }
 
         }
 // ENCOUNTER AFTER CHOICE #1

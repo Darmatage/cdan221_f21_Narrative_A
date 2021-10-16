@@ -334,6 +334,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83227c03969f995428ee04a5fb3b5b51, type: 3}
+--- !u!114 &48363515 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7376877549875853647, guid: 83227c03969f995428ee04a5fb3b5b51, type: 3}
+  m_PrefabInstance: {fileID: 48363514}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f571fdcd93d4643a846861f22fd1bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &58514326
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,8 +429,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 620109165}
-        m_TargetAssemblyTypeName: DialogueScene2a, Assembly-CSharp
-        m_MethodName: Choice1aFunct
+        m_TargetAssemblyTypeName: DialogueScene2e, Assembly-CSharp
+        m_MethodName: Choice1bFunct
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -857,8 +868,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 620109165}
-        m_TargetAssemblyTypeName: DialogueScene2a, Assembly-CSharp
-        m_MethodName: Choice1aFunct
+        m_TargetAssemblyTypeName: DialogueScene2e, Assembly-CSharp
+        m_MethodName: Choice1dFunct
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1069,7 +1080,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 620109165}
-        m_TargetAssemblyTypeName: DialogueScene2a, Assembly-CSharp
+        m_TargetAssemblyTypeName: DialogueScene2e, Assembly-CSharp
         m_MethodName: Choice1aFunct
         m_Mode: 1
         m_Arguments:
@@ -1201,7 +1212,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 620109165}
-        m_TargetAssemblyTypeName: DialogueScene2a, Assembly-CSharp
+        m_TargetAssemblyTypeName: DialogueScene2e, Assembly-CSharp
         m_MethodName: talking
         m_Mode: 1
         m_Arguments:
@@ -1334,8 +1345,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 620109165}
-        m_TargetAssemblyTypeName: DialogueScene2a, Assembly-CSharp
-        m_MethodName: Choice1aFunct
+        m_TargetAssemblyTypeName: DialogueScene2e, Assembly-CSharp
+        m_MethodName: Choice1fFunct
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1508,23 +1519,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 620109160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db159d4edcbdf8140969267cea04af22, type: 3}
+  m_Script: {fileID: 11500000, guid: 187ca05a9ed05b346b30463fede59fd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   primeInt: 1
-  Char1name: {fileID: 940877083}
-  Char1speech: {fileID: 1479366048}
-  Char2speech: {fileID: 1841031408}
+  BabyPlatname: {fileID: 940877083}
+  BabyPlatspeech: {fileID: 1479366048}
+  BabyPlatthoughts: {fileID: 1841031408}
+  MamaPlatname: {fileID: 313387661}
+  MamaPlatspeech: {fileID: 1337527504}
+  Snakename: {fileID: 1337527504}
+  Snakespeech: {fileID: 367532157}
+  Bearname: {fileID: 2071230842}
+  Bearspeech: {fileID: 31182049}
   dialogue: {fileID: 126090615}
-  ArtChar1: {fileID: 1172518722}
-  ArtChar2: {fileID: 274442199}
+  ArtPlat1: {fileID: 1172518722}
+  ArtPlat2: {fileID: 274442199}
+  ArtMama1: {fileID: 752196229}
+  ArtMama2: {fileID: 1176188379}
+  ArtSnake1: {fileID: 15142870}
+  ArtBear1: {fileID: 130823237}
+  ArtBam: {fileID: 1931822545}
   ArtBG1: {fileID: 1491497869}
-  Choice1a: {fileID: 364655472}
-  Choice1b: {fileID: 0}
-  NextScene1Button: {fileID: 0}
-  NextScene2Button: {fileID: 0}
+  Choice1a: {fileID: 378138688}
+  Choice1b: {fileID: 58514326}
+  Choice1c: {fileID: 721689740}
+  Choice1d: {fileID: 364655472}
+  Choice1e: {fileID: 1614967583}
+  Choice1f: {fileID: 601904314}
   nextButton: {fileID: 436491508}
-  audioSource: {fileID: 1291189691}
+  gameHandler: {fileID: 48363515}
 --- !u!1 &643632212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1771,8 +1795,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 620109165}
-        m_TargetAssemblyTypeName: DialogueScene2a, Assembly-CSharp
-        m_MethodName: Choice1aFunct
+        m_TargetAssemblyTypeName: DialogueScene2e, Assembly-CSharp
+        m_MethodName: Choice1cFunct
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3037,8 +3061,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 620109165}
-        m_TargetAssemblyTypeName: DialogueScene2a, Assembly-CSharp
-        m_MethodName: Choice1aFunct
+        m_TargetAssemblyTypeName: DialogueScene2e, Assembly-CSharp
+        m_MethodName: Choice1eFunct
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

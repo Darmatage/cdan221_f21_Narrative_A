@@ -12,7 +12,7 @@ public class GameHandler : MonoBehaviour{
 		public static bool beenToFox = false;
 		public static bool beenToRabbit = false;
 		public static bool gotBearHelp = false;
-		
+	    public static bool ateBerries = false;
 		
 		
         //public GameObject textGameObject;
@@ -26,7 +26,7 @@ public class GameHandler : MonoBehaviour{
         }
 
 //assign true to static variables
-		public void UpdateOwl(){
+		public  void UpdateOwl(){
                 beenToOwl = true;
 				Debug.Log("beenToOwl = " + beenToOwl);
         }
@@ -40,6 +40,10 @@ public class GameHandler : MonoBehaviour{
                 beenToFox = true;
 				Debug.Log("beenToFox = " + beenToFox);
         }
+		public void UpdateBerries(){
+                ateBerries = true;
+				Debug.Log("ateBerries = " + ateBerries);
+        }
 		
 		public void UpdateRabbit(){
                 beenToRabbit = true;
@@ -50,6 +54,7 @@ public class GameHandler : MonoBehaviour{
                 gotBearHelp = true;
 				Debug.Log("BearHelp = " + gotBearHelp);
         }
+		
 
 //return static variables 
 		public bool isOwl(){
@@ -70,6 +75,10 @@ public class GameHandler : MonoBehaviour{
 		
 		public bool isBearHelp(){
 			return gotBearHelp;
+        }
+		
+		public bool isBerries(){
+			return ateBerries;
         }
 
 

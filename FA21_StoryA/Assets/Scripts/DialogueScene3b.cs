@@ -26,7 +26,7 @@ public class DialogueScene3b : MonoBehaviour {
         public GameObject NextScene1Button;
         public GameObject NextScene2Button;
         public GameObject nextButton;
-       //public GameHandler gameHandler;
+        public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
 
@@ -67,6 +67,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2name.text = "";
                 Char2speech.text = "Wow! This is beautiful!";
 				Char3speech.text = "";
+				gameHandler.UpdateFox();
         }
        else if (primeInt ==3){
 		        // AudioSource.Play();

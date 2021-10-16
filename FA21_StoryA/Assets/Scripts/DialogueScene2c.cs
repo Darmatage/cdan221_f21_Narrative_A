@@ -23,7 +23,7 @@ public class DialogueScene2c : MonoBehaviour {
         public GameObject NextScene1Button;
         public GameObject NextScene2Button;
         public GameObject nextButton;
-       //public GameHandler gameHandler;
+        public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
 
@@ -173,6 +173,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "What do I do? They might know something about mama…";
 				Char2name.text = "";
 				Char3speech.text = "";
+				gameHandler.UpdateRabbit();
                 // Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;

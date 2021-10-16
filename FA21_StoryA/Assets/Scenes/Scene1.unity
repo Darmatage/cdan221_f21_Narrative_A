@@ -1256,6 +1256,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &687971601 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7376877549875853647, guid: 83227c03969f995428ee04a5fb3b5b51, type: 3}
+  m_PrefabInstance: {fileID: 132279460}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f571fdcd93d4643a846861f22fd1bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &699221020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,7 +1585,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1121249009}
         m_TargetAssemblyTypeName: DialogueScene1, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: Choice1dFunct
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1836,6 +1847,7 @@ MonoBehaviour:
   NextScene3Button: {fileID: 1385708375}
   NextScene4Button: {fileID: 2089272773}
   nextButton: {fileID: 2000770466}
+  gameHandler: {fileID: 687971601}
 --- !u!1 &1385708375
 GameObject:
   m_ObjectHideFlags: 0
@@ -2785,13 +2797,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1121249004}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1121249009}
+        m_TargetAssemblyTypeName: DialogueScene1, Assembly-CSharp
+        m_MethodName: SceneChange3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

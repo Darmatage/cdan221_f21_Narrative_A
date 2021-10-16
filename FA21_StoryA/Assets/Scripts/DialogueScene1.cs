@@ -25,7 +25,7 @@ public class DialogueScene1 : MonoBehaviour {
 		public GameObject NextScene3Button;
         public GameObject NextScene4Button; //still to add
         public GameObject nextButton;
-       //public GameHandler gameHandler;
+        public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
 
@@ -42,6 +42,7 @@ void Start(){         // initial visibility settings
 		NextScene3Button.SetActive(false);
         NextScene4Button.SetActive(false);
         nextButton.SetActive(true);
+		 
    }
 
 void Update(){         // use spacebar as Next button
@@ -70,9 +71,22 @@ public void talking(){         // main story function. Players hit next to progr
 				// Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
-                Choice1a.SetActive(true); // function Choice1aFunct()
-                Choice1b.SetActive(true); // function Choice1bFunct()
+				
+				if (!gameHandler.isFox() || !gameHandler.isBear()){
+					Choice1a.SetActive(true);
+				}
+				
+                if (!gameHandler.isRabbit()){
+					Choice1b.SetActive(true);
+				}
+                
 				Choice1c.SetActive(true);
+				
+				if (gameHandler.isBear() || gameHandler.isFox()){
+				    Choice1d.SetActive(true);
+			    }
+			
+						
                 
         }
       
@@ -99,6 +113,13 @@ public void talking(){         // main story function. Players hit next to progr
                 nextButton.SetActive(false);
                 allowSpace = false;
                 NextScene3Button.SetActive(true);
+        }
+		else if (primeInt == 400){
+                Char1name.text = "Baby Platypus";
+                Char1speech.text = "Let's go across the river";
+                nextButton.SetActive(false);
+                allowSpace = false;
+                NextScene4Button.SetActive(true);
         }
      }
 
@@ -129,6 +150,17 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "Baby Platypus";
                 Char1speech.text = "Let's go to the tree hole";
                 primeInt = 299;
+                Choice1a.SetActive(false);
+                Choice1b.SetActive(false);
+				Choice1c.SetActive(false);
+				Choice1d.SetActive(false);
+                nextButton.SetActive(true);
+                allowSpace = true;
+        }
+		public void Choice1dFunct(){
+                Char1name.text = "Baby Platypus";
+                Char1speech.text = "Let's go across the river";
+                primeInt = 399;
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
 				Choice1c.SetActive(false);

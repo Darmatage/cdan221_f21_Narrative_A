@@ -23,7 +23,7 @@ public class DialogueScene6a : MonoBehaviour {
         public GameObject NextScene1Button;
         //public GameObject NextScene2Button;
         public GameObject nextButton;
-       //public GameHandler gameHandler;
+       public GameHandler gameHandler;
        public AudioSource audioSource;
         private bool allowSpace = true;
 
@@ -38,6 +38,8 @@ void Start(){         // initial visibility settings
         NextScene1Button.SetActive(false);
        // NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
+		
+
    }
 
 void Update(){         // use spacebar as Next button
@@ -123,7 +125,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2name.text = "";
                 Char2speech.text = "";
 				Char3speech.text = "OLD BEAR PROTECTION SERVICES ACQUIRED";
-				//gameHandler.AddPlayerStat(1);
+				gameHandler.UpdateBearHelp();
         }
        else if (primeInt == 12){
                 ArtChar1.SetActive(true);
