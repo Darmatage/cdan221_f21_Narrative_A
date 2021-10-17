@@ -192,4 +192,7 @@ public void talking(){         // main story function. Players hit next to progr
 		 public void SceneChange3(){
                 SceneManager.LoadScene("Scene2d");
         }
+		public void SceneChange4(){
+                SceneManager.LoadScene("Scene2e");
+        }
 }
