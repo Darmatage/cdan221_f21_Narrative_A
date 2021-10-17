@@ -150,7 +150,7 @@ RectTransform:
   m_GameObject: {fileID: 127641425}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1548160710}
   m_RootOrder: 5
@@ -1330,7 +1330,7 @@ RectTransform:
   m_GameObject: {fileID: 1135093640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1548160710}
   m_RootOrder: 3
@@ -1482,7 +1482,7 @@ RectTransform:
   m_GameObject: {fileID: 1248302437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1548160710}
   m_RootOrder: 6
@@ -1638,7 +1638,7 @@ RectTransform:
   m_GameObject: {fileID: 1291732513}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1548160710}
   m_RootOrder: 4
@@ -1953,6 +1953,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83227c03969f995428ee04a5fb3b5b51, type: 3}
+--- !u!114 &1479060576 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7376877549875853647, guid: 83227c03969f995428ee04a5fb3b5b51, type: 3}
+  m_PrefabInstance: {fileID: 1479060575}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f571fdcd93d4643a846861f22fd1bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1504746412
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,7 +2258,7 @@ MonoBehaviour:
   NextScene1Button: {fileID: 977117013}
   NextScene2Button: {fileID: 1425075264}
   nextButton: {fileID: 253986436}
-  gameHandler: {fileID: 0}
+  gameHandler: {fileID: 1479060576}
 --- !u!1 &1649314830
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,7 +2440,7 @@ RectTransform:
   m_GameObject: {fileID: 1711529109}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1548160710}
   m_RootOrder: 2
