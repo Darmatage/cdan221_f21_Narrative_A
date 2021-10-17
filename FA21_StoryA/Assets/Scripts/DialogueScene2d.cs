@@ -88,7 +88,7 @@ public void talking(){         // main story function. Players hit next to progr
 		
 		//been to owl
 		else if (primeInt == 40){
-			    ArtChar1.SetActive(true);
+			    ArtChar2.SetActive(true);
                 dialogue.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";

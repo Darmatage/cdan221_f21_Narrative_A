@@ -25,6 +25,7 @@ public class DialogueScene2e : MonoBehaviour {
 		public GameObject ArtBear1;
 		public GameObject ArtBam;
         public GameObject ArtBG1;
+		public GameObject ArtBG2;
         public GameObject Choice1a;
         public GameObject Choice1b;
 		public GameObject Choice1c;
@@ -40,12 +41,16 @@ void Start(){         // initial visibility settings
         dialogue.SetActive(false);
         ArtPlat1.SetActive(false);
 		ArtPlat2.SetActive(false);
+		StartCoroutine(FadeIn(ArtMama1));
 		ArtMama1.SetActive(true);
 		ArtMama2.SetActive(false);
+		StartCoroutine(FadeIn(ArtSnake1));
 		ArtSnake1.SetActive(true);
 		ArtBear1.SetActive(false);
 		ArtBam.SetActive(false);
+		StartCoroutine(FadeIn(ArtBG1));
         ArtBG1.SetActive(true);
+		ArtBG2.SetActive(false);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
 		Choice1c.SetActive(false);
@@ -236,7 +241,8 @@ public void talking(){         // main story function. Players hit next to progr
         }
 		else if (primeInt == 202){
 			 //add rainy background
-			   
+			
+			 ArtBG2.SetActive(true);
 			    ArtPlat2.SetActive(false);
 				
                 BabyPlatname.text = "";
@@ -251,6 +257,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 		 else if (primeInt == 203){
 			 //add rainy background
+			 StartCoroutine(FadeIn(ArtPlat2));
 			 ArtPlat2.SetActive(true);
                 BabyPlatname.text = "BABY PLATYPUS";
                 BabyPlatspeech.text = "Mama?";
@@ -610,7 +617,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Bearspeech.text = "";
 		}
 		else if (primeInt == 508){
-			 SceneChange1();   
+			 SceneChange2();   
 		}
 		else if (primeInt == 600){
 				ArtBam.SetActive(true);
@@ -820,7 +827,7 @@ public void talking(){         // main story function. Players hit next to progr
                 float alphaLevel = 0;
                 fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
                 for(int i = 0; i < 100; i++){
-                        alphaLevel += 0.01f;
+                        alphaLevel += 0.1f;
                         yield return null;
                         fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
                         Debug.Log("Alpha is: " + alphaLevel);
@@ -831,7 +838,7 @@ public void talking(){         // main story function. Players hit next to progr
                 float alphaLevel = 1;
                 fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
                 for(int i = 0; i < 100; i++){
-                        alphaLevel -= 0.01f;
+                        alphaLevel -= 0.1f;
                         yield return null;
                         fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
                         Debug.Log("Alpha is: " + alphaLevel);
