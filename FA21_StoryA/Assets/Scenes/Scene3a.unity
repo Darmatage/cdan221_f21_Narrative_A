@@ -259,7 +259,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: GO BACK TO FORREST
+  m_Text: RETURN TO FORREST
 --- !u!222 &171113582
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -806,7 +806,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: GO DEEPER INTO THE CAVE
+  m_Text: ENTER CAVE
 --- !u!222 &539816282
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1571,7 +1571,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: KEEP GOING
+  m_Text: GO IN?
 --- !u!222 &1365431749
 CanvasRenderer:
   m_ObjectHideFlags: 0

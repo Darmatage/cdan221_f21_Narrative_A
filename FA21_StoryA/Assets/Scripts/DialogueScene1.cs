@@ -91,17 +91,18 @@ public void talking(){         // main story function. Players hit next to progr
 				if (gameHandler.isBear() || gameHandler.isFox()){
 				    Choice1d.SetActive(true);
 			    }
+	   }
 			 else if (primeInt == 11){
                 ArtChar1.SetActive(true);
                 dialogue.SetActive(true);
-                Char1name.text = "BABY PLATYPUS";
+                Char1name.text = "";
                 Char1speech.text = "The river is now shallow enough to cross!";
+				gameHandler.UpdateNewDiscovery();
 				primeInt = 1;
-                
-        }
+                }
 						
                 
-        }
+        
       
 // ENCOUNTER AFTER CHOICE #1
 
@@ -135,6 +136,7 @@ public void talking(){         // main story function. Players hit next to progr
                 NextScene4Button.SetActive(true);
         }
      }
+	 
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
         public void Choice1aFunct(){
