@@ -71,7 +71,6 @@ public void talking(){         // main story function. Players hit next to progr
         else if (primeInt == 2){
                 ArtMama1.SetActive(true);
 				ArtSnake1.SetActive(true);
-                dialogue.SetActive(true);
                 BabyPlatname.text = "";
                 BabyPlatspeech.text = "";
 				BabyPlatthoughts.text = "";
@@ -87,6 +86,7 @@ public void talking(){         // main story function. Players hit next to progr
                 ArtMama1.SetActive(false);
 				ArtSnake1.SetActive(false);
                 ArtPlat2.SetActive(true);
+				dialogue.SetActive(true);
                 BabyPlatname.text = "BABY PLATYPUS";
                 BabyPlatspeech.text = "";
 				BabyPlatthoughts.text = "Oh no, my mom is in trouble!";
