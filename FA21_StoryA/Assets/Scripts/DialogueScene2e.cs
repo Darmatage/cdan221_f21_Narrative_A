@@ -348,6 +348,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 		else if (primeInt == 305){
 			    ArtMama2.SetActive(true);
+				ArtMama1.SetActive(false);
 				ArtSnake1.SetActive(false);
                 BabyPlatname.text = "";
                 BabyPlatspeech.text = "";
