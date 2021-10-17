@@ -24,7 +24,7 @@ public class DialogueScene4b : MonoBehaviour {
 		public GameObject ArtBG2;
         public GameObject Choice1a;
         public GameObject Choice1b;
-        public GameObject NextScene1Button;
+        //public GameObject NextScene1Button;
         public GameObject NextScene2Button;
         public GameObject nextButton;
         public GameHandler gameHandler;
@@ -42,7 +42,7 @@ void Start(){         // initial visibility settings
 		ArtBG2.SetActive(false);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
-        NextScene1Button.SetActive(false);
+        //NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
    }
@@ -258,9 +258,11 @@ public void talking(){         // main story function. Players hit next to progr
 				Char2name.text = "";
 				Char3speech.text = "";
 				Char4speech.text = "";
-                nextButton.SetActive(false);
-                allowSpace = false;
-                NextScene1Button.SetActive(true); //Loose Screen
+                
+        }
+		 else if (primeInt == 103){
+                SceneChange1();
+                
         }
 
        else if (primeInt == 200){
@@ -354,7 +356,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 
         public void SceneChange1(){
-               SceneManager.LoadScene("SceneLose1"); //Loose Screen
+               SceneManager.LoadScene("Scene_Lose1"); //Loose Screen
         }
         public void SceneChange2(){
                 SceneManager.LoadScene("Scene1");
