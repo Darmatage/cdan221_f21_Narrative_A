@@ -30,9 +30,11 @@ void Start(){         // initial visibility settings
         dialogue.SetActive(false);
         ArtChar1.SetActive(false);
 		ArtChar2.SetActive(false);
-		ArtChar3.SetActive(false);
+		StartCoroutine(FadeIn(ArtChar3));
+		ArtChar3.SetActive(true);
 		ArtChar4.SetActive(false);
 		ArtBam.SetActive(false);
+		StartCoroutine(FadeIn(ArtBG1));
         ArtBG1.SetActive(true);
         nextButton.SetActive(true);
    }
@@ -318,6 +320,28 @@ public void talking(){         // main story function. Players hit next to progr
 		
 		 public void SceneChange2(){
                SceneManager.LoadScene("Scene1");
+        }
+		
+		 IEnumerator FadeIn(GameObject fadeImage){
+                float alphaLevel = 0;
+                fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                for(int i = 0; i < 100; i++){
+                        alphaLevel += 0.01f;
+                        yield return null;
+                        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                        Debug.Log("Alpha is: " + alphaLevel);
+                }
+        }
+
+        IEnumerator FadeOut(GameObject fadeImage){
+                float alphaLevel = 1;
+                fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                for(int i = 0; i < 100; i++){
+                        alphaLevel -= 0.01f;
+                        yield return null;
+                        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                        Debug.Log("Alpha is: " + alphaLevel);
+                }
         }
      
 }

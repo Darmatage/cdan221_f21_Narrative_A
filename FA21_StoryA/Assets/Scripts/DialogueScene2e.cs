@@ -40,9 +40,9 @@ void Start(){         // initial visibility settings
         dialogue.SetActive(false);
         ArtPlat1.SetActive(false);
 		ArtPlat2.SetActive(false);
-		ArtMama1.SetActive(false);
+		ArtMama1.SetActive(true);
 		ArtMama2.SetActive(false);
-		ArtSnake1.SetActive(false);
+		ArtSnake1.SetActive(true);
 		ArtBear1.SetActive(false);
 		ArtBam.SetActive(false);
         ArtBG1.SetActive(true);
@@ -71,6 +71,7 @@ public void talking(){         // main story function. Players hit next to progr
         else if (primeInt == 2){
                 ArtMama1.SetActive(true);
 				ArtSnake1.SetActive(true);
+				dialogue.SetActive(true);
                 BabyPlatname.text = "";
                 BabyPlatspeech.text = "";
 				BabyPlatthoughts.text = "";
@@ -86,7 +87,6 @@ public void talking(){         // main story function. Players hit next to progr
                 ArtMama1.SetActive(false);
 				ArtSnake1.SetActive(false);
                 ArtPlat2.SetActive(true);
-				dialogue.SetActive(true);
                 BabyPlatname.text = "BABY PLATYPUS";
                 BabyPlatspeech.text = "";
 				BabyPlatthoughts.text = "Oh no, my mom is in trouble!";
@@ -234,10 +234,13 @@ public void talking(){         // main story function. Players hit next to progr
 				Bearname.text = "";
                 Bearspeech.text = "";
         }
-		 else if (primeInt == 202){
+		else if (primeInt == 202){
 			 //add rainy background
-                BabyPlatname.text = "BABY PLATYPUS";
-                BabyPlatspeech.text = "Mama?";
+			   
+			    ArtPlat2.SetActive(false);
+				
+                BabyPlatname.text = "";
+                BabyPlatspeech.text = "";
 				BabyPlatthoughts.text = "";
 				MamaPlatname.text = "";
                 MamaPlatspeech.text = "";
@@ -246,10 +249,11 @@ public void talking(){         // main story function. Players hit next to progr
 				Bearname.text = "";
                 Bearspeech.text = "";
         }
-		else if (primeInt == 203){
+		 else if (primeInt == 203){
 			 //add rainy background
+			 ArtPlat2.SetActive(true);
                 BabyPlatname.text = "BABY PLATYPUS";
-                BabyPlatspeech.text = "MAMA?";
+                BabyPlatspeech.text = "Mama?";
 				BabyPlatthoughts.text = "";
 				MamaPlatname.text = "";
                 MamaPlatspeech.text = "";
@@ -261,7 +265,7 @@ public void talking(){         // main story function. Players hit next to progr
 		else if (primeInt == 204){
 			 //add rainy background
                 BabyPlatname.text = "BABY PLATYPUS";
-                BabyPlatspeech.text = "I'M SORRY PLEASE WAKE UP!";
+                BabyPlatspeech.text = "MAMA?";
 				BabyPlatthoughts.text = "";
 				MamaPlatname.text = "";
                 MamaPlatspeech.text = "";
@@ -273,7 +277,7 @@ public void talking(){         // main story function. Players hit next to progr
 		else if (primeInt == 205){
 			 //add rainy background
                 BabyPlatname.text = "BABY PLATYPUS";
-                BabyPlatspeech.text = "Mama...";
+                BabyPlatspeech.text = "I'M SORRY PLEASE WAKE UP!";
 				BabyPlatthoughts.text = "";
 				MamaPlatname.text = "";
                 MamaPlatspeech.text = "";
@@ -283,6 +287,20 @@ public void talking(){         // main story function. Players hit next to progr
                 Bearspeech.text = "";
         }
 		else if (primeInt == 206){
+			 //add rainy background
+				
+                BabyPlatname.text = "BABY PLATYPUS";
+                BabyPlatspeech.text = "Mama...";
+				BabyPlatthoughts.text = "";
+				MamaPlatname.text = "";
+                MamaPlatspeech.text = "";
+				Snakename.text = "";
+                Snakespeech.text = "";
+				Bearname.text = "";
+                Bearspeech.text = "";
+        }
+		else if (primeInt == 207){
+			
 			SceneChange1();
         }
 		
@@ -299,6 +317,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 		else if (primeInt == 301){
       			ArtPlat2.SetActive(false);
+				StartCoroutine(FadeIn(ArtBear1));
 				ArtBear1.SetActive(true);
                 BabyPlatname.text = "";
                 BabyPlatspeech.text = "";
@@ -796,5 +815,26 @@ public void talking(){         // main story function. Players hit next to progr
         }
         public void SceneChange2(){
                 SceneManager.LoadScene("Scene_Win1");
+        }
+		  IEnumerator FadeIn(GameObject fadeImage){
+                float alphaLevel = 0;
+                fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                for(int i = 0; i < 100; i++){
+                        alphaLevel += 0.01f;
+                        yield return null;
+                        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                        Debug.Log("Alpha is: " + alphaLevel);
+                }
+        }
+
+        IEnumerator FadeOut(GameObject fadeImage){
+                float alphaLevel = 1;
+                fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                for(int i = 0; i < 100; i++){
+                        alphaLevel -= 0.01f;
+                        yield return null;
+                        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                        Debug.Log("Alpha is: " + alphaLevel);
+                }
         }
 }

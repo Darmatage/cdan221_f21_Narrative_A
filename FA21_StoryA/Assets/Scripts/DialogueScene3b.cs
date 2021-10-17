@@ -33,7 +33,7 @@ public class DialogueScene3b : MonoBehaviour {
 void Start(){         // initial visibility settings
         dialogue.SetActive(false);
         ArtChar1.SetActive(false);
-		ArtChar2.SetActive(false);
+		ArtChar2.SetActive(true);
 		ArtChar3.SetActive(false);
 		ArtChar4.SetActive(false);
 		ArtChar5.SetActive(false);
