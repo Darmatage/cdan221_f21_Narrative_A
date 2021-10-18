@@ -34,7 +34,8 @@ public class DialogueScene2e : MonoBehaviour {
         public GameObject Choice1f;
         public GameObject nextButton;
         public GameHandler gameHandler;
-       //public AudioSource audioSource;
+
+    
         private bool allowSpace = true;
 
 void Start(){         // initial visibility settings
@@ -58,6 +59,7 @@ void Start(){         // initial visibility settings
 		Choice1e.SetActive(false);
         Choice1f.SetActive(false);
         nextButton.SetActive(true);
+
    }
 
 void Update(){         // use spacebar as Next button
@@ -71,7 +73,7 @@ void Update(){         // use spacebar as Next button
 public void talking(){         // main story function. Players hit next to progress to next int
         primeInt = primeInt + 1;
         if (primeInt == 1){
-                // AudioSource.Play();
+               
         }
         else if (primeInt == 2){
                 ArtMama1.SetActive(true);
@@ -241,7 +243,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 		else if (primeInt == 202){
 			 //add rainy background
-			
+			 
 			 ArtBG2.SetActive(true);
 			    ArtPlat2.SetActive(false);
 				
@@ -373,6 +375,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Bearspeech.text = "";
         }
 		else if (primeInt == 305){
+			    
 			    ArtMama2.SetActive(true);
 				ArtMama1.SetActive(false);
 				ArtSnake1.SetActive(false);
@@ -567,6 +570,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Bearspeech.text = "";
 		}
 		else if (primeInt == 504){
+			
 			    ArtPlat1.SetActive(true);
 				ArtSnake1.SetActive(false);
                 BabyPlatname.text = "BABY PLATYPUS";
@@ -709,7 +713,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Bearspeech.text = "";
 		}
 		else if (primeInt == 607){
-				SceneChange2();
+				SceneChange1();
 		}
      }
 
