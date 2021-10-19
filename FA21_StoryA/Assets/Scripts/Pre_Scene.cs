@@ -17,6 +17,8 @@ public class Pre_Scene : MonoBehaviour {
 		public GameObject ArtBG5;
 		public GameObject ArtBG6;
 		public GameObject ArtBG7;
+		public GameObject ArtBG8;
+		public GameObject ArtChar1;
         public GameObject nextButton;
         public GameHandler gameHandler;
        //public AudioSource audioSource;
@@ -31,6 +33,8 @@ void Start(){         // initial visibility settings
 		ArtBG5.SetActive(false);
 		ArtBG6.SetActive(false);
 		ArtBG7.SetActive(false);
+		ArtBG8.SetActive(false);
+		ArtChar1.SetActive(false);
         nextButton.SetActive(true);
    }
 
@@ -82,16 +86,60 @@ public void talking(){         // main story function. Players hit next to progr
                 
         }
        else if (primeInt == 10){
-                Char1speech.text = "";
-                SceneChange1();
+		        ArtBG8.SetActive(true);
+				ArtBG7.SetActive(false);
+				ArtChar1.SetActive(true);
+                Char1speech.text = "...";
+                
+        }
+		else if (primeInt == 11){
+                Char1speech.text = "Where am I...?";
+                
+        }
+		
+		else if (primeInt == 12){
+                Char1speech.text = "More importantly...?";
+                
         }
         
+		else if (primeInt == 13){
+                Char1speech.text = "Where's Mama?";
+                
+        }
+		
+		else if (primeInt == 14){
+                Char1speech.text = "Hmm, It seems the river has flooded too much to cross at the moment.";
+                
+        }
+		else if (primeInt == 15){
+                Char1speech.text = "Maybe I can look for clues to find her.";
+                
+        }
+		
+		else if (primeInt == 16){
+                Char1speech.text = "There are some footprints over there.";
+                
+        }
+		else if (primeInt == 17){
+                Char1speech.text = "And a shaking bush!";
+                
+        }
+		else if (primeInt == 18){
+                Char1speech.text = "I also hear something from that treehole over there.";
+                
+        }
+		else if (primeInt == 19){
+                Char1speech.text = "";
+				SceneChange1();
+                
+        }
      }
 
 
         public void SceneChange1(){
                SceneManager.LoadScene("Scene1");
         }
+		
       
 		
 }
