@@ -141,7 +141,7 @@ public class GameHandler : MonoBehaviour{
 
         public void StartGame(){
 			   ResetGame();
-                SceneManager.LoadScene("Scene1");
+                SceneManager.LoadScene("Pre_Scene");
         }
 		
 		public void Credits(){
