@@ -140,6 +140,7 @@ public class GameHandler : MonoBehaviour{
         //        scoreTemp.text = "Score: " + score; }
 
         public void StartGame(){
+			   ResetGame();
                 SceneManager.LoadScene("Scene1");
         }
 		
@@ -153,7 +154,17 @@ public class GameHandler : MonoBehaviour{
                 SceneManager.LoadScene("MainMenu");
         }
 		
-		
+		 public void ResetGame(){
+             beenToOwl = false; 
+			 beenToBear = false;
+			 beenToFox = false; 
+			 beenToRabbit = false; 
+			 gotBearHelp = false; 			 
+			 ateBerries = false;
+			 newDiscovery = false;
+			 
+			   
+        }
 
         public void QuitGame(){
                 #if UNITY_EDITOR

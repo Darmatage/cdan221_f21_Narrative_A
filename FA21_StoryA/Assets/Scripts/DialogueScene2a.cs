@@ -37,6 +37,10 @@ void Start(){         // initial visibility settings
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
+		
+		if (gameHandler.isBear() || gameHandler.isFox()){
+			primeInt = 4;
+		}
    }
 
 void Update(){         // use spacebar as Next button
@@ -72,8 +76,17 @@ public void talking(){         // main story function. Players hit next to progr
                Char2speech.text = "The footprints on the left look much bigger than the footprints on the right.";
         }
        else if (primeInt == 5){
+		   ArtChar1.SetActive(false);
+		   ArtChar2.SetActive(true);
+		  if (!gameHandler.isBear() && !gameHandler.isFox()){
 				Char1speech.text = "";
                 Char2speech.text = "Which footprints should I follow?";
+		  }
+		   if (gameHandler.isBear() || gameHandler.isFox()){
+			   dialogue.SetActive(true);
+				Char1speech.text = "";
+                Char2speech.text = "Back here again...";
+		  }
 				// Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
