@@ -186,17 +186,38 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "OWL";
-                Char2speech.text = "By the way I must warn you! Beware of the snakes in this forest, they love to come out and hunt for food after a storm, especially after one like last night.";
+                Char2speech.text = "By the way I must warn you!";
 	   }
-     else if (primeInt == 110){  
-                ArtChar2.SetActive(true);
-                ArtChar1.SetActive(false);
+	   else if (primeInt == 110){  //this is where you can finish the script copy and paste and add 1 to prime int
+
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "OWL";
-                Char2speech.text = "But don't fret! Snakes hate loud noises and vibrations, you can always scare off snakes by smacking that tail of yours on the ground really hard.";
+                Char2speech.text = "Beware of the snakes in this forest!";
+	   } 
+	   else if (primeInt == 111){  //this is where you can finish the script copy and paste and add 1 to prime int
+
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "OWL";
+                Char2speech.text = "They love to come out and hunt for food after a storm, especially after one like last night.";
+	   }
+     else if (primeInt == 112){  
+ 
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "OWL";
+                Char2speech.text = "But don't fret! Snakes hate loud noises and vibrations.";
     }
-    else if (primeInt == 111){ 
+	
+	 else if (primeInt == 113){  
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "OWL";
+                Char2speech.text = "You can always scare off snakes by smacking that tail of yours on the ground really hard.";
+    } 
+	
+    else if (primeInt == 114){ 
                 ArtChar1.SetActive(true);
                 ArtChar2.SetActive(false);
                  Char1name.text = "BABY PLATYPUS";
@@ -205,7 +226,7 @@ public void talking(){         // main story function. Players hit next to progr
                  Char2speech.text = "";
     }
 
-	    else if (primeInt == 112){ //this will be your last line
+	    else if (primeInt == 115){ //this will be your last line
 		            ArtChar2.SetActive(true);
                 ArtChar1.SetActive(false);
                 Char1name.text = "";
