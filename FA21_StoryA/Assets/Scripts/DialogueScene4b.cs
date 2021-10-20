@@ -20,6 +20,9 @@ public class DialogueScene4b : MonoBehaviour {
 		public GameObject ArtChar3; //fox smile
 		public GameObject ArtChar4; //fox surprised
 		public GameObject ArtChar5; // fox wink
+		public GameObject ArtChar6;
+		public GameObject ArtChar7;
+		public GameObject ArtChar8;
         public GameObject ArtBG1;
 		public GameObject ArtBG2;
         public GameObject Choice1a;
@@ -33,12 +36,15 @@ public class DialogueScene4b : MonoBehaviour {
 
 void Start(){         // initial visibility settings
         dialogue.SetActive(false);
-        ArtChar1.SetActive(false);
-		StartCoroutine(FadeIn(ArtChar2));
-		ArtChar2.SetActive(true);
+		StartCoroutine(FadeIn(ArtChar1));
+        ArtChar1.SetActive(true);
+		ArtChar2.SetActive(false);
 		ArtChar3.SetActive(false);
 		ArtChar4.SetActive(false);
 		ArtChar5.SetActive(false);
+		ArtChar6.SetActive(false);
+		ArtChar7.SetActive(false);
+		ArtChar8.SetActive(false);
 		StartCoroutine(FadeIn(ArtBG1));
         ArtBG1.SetActive(true);
 		ArtBG2.SetActive(false);
@@ -63,7 +69,7 @@ public void talking(){         // main story function. Players hit next to progr
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-                ArtChar2.SetActive(true);
+                ArtChar1.SetActive(true);
                 dialogue.SetActive(true);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "";
@@ -73,6 +79,8 @@ public void talking(){         // main story function. Players hit next to progr
 				Char4speech.text = "";
         }
        else if (primeInt ==3){
+		   ArtChar1.SetActive(false);
+		   ArtChar2.SetActive(true);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -82,7 +90,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
        else if (primeInt == 4){
 				ArtChar2.SetActive(false);
-                ArtChar1.SetActive(true);
+                ArtChar6.SetActive(true);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "HEY MR.FOX! There’s two different types of berries!";
                 Char2name.text = "";
@@ -99,7 +107,7 @@ public void talking(){         // main story function. Players hit next to progr
 				Char4speech.text = "";
         }
        else if (primeInt == 6){
-                ArtChar1.SetActive(false);
+                ArtChar6.SetActive(false);
                 ArtChar5.SetActive(true);
 				ArtBG1.SetActive(false);
 				ArtBG2.SetActive(true);
@@ -136,7 +144,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 		 else if (primeInt ==9){
 			    ArtChar4.SetActive(false);
-                ArtChar1.SetActive(true);
+                ArtChar6.SetActive(true);
 				ArtBG2.SetActive(false);
 				ArtBG1.SetActive(true);
                 Char1name.text = "BABY PLATYPUS";
@@ -147,7 +155,7 @@ public void talking(){         // main story function. Players hit next to progr
 				Char4speech.text = "";
         }
 		else if (primeInt ==10){
-                ArtChar1.SetActive(false);
+                ArtChar6.SetActive(false);
                 ArtChar4.SetActive(true);
 				ArtBG1.SetActive(false);
 				ArtBG2.SetActive(true);
@@ -176,7 +184,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 		else if (primeInt ==13){
 			    ArtChar4.SetActive(false);
-                ArtChar1.SetActive(true);
+                ArtChar8.SetActive(true);
 				ArtBG2.SetActive(false);
 				ArtBG1.SetActive(true);
                 Char1name.text = "BABY PLATYPUS";
@@ -187,7 +195,7 @@ public void talking(){         // main story function. Players hit next to progr
 				Char4speech.text = "";
         }
 		else if (primeInt ==14){
-			    ArtChar1.SetActive(false);
+			    ArtChar8.SetActive(false);
                 ArtChar5.SetActive(true);
 				ArtBG1.SetActive(false);
 				ArtBG2.SetActive(true);
@@ -210,7 +218,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 		else if (primeInt ==16){
                 ArtChar3.SetActive(false);
-                ArtChar1.SetActive(true);
+                ArtChar7.SetActive(true);
 				ArtBG2.SetActive(false);
 				ArtBG1.SetActive(true);
                 Char1name.text = "BABY PLATYPUS";
@@ -221,7 +229,7 @@ public void talking(){         // main story function. Players hit next to progr
 				Char4speech.text = "";
         }
 		else if (primeInt ==17){
-				ArtChar1.SetActive(false);
+				ArtChar7.SetActive(false);
                 ArtChar2.SetActive(true);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "";
@@ -238,6 +246,8 @@ public void talking(){         // main story function. Players hit next to progr
         }
 // ENCOUNTER AFTER CHOICE #1
        else if (primeInt == 100){
+		   ArtChar1.SetActive(false);
+                ArtChar2.SetActive(true);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "";
                 Char2speech.text = "*eats white berries*";
@@ -246,6 +256,8 @@ public void talking(){         // main story function. Players hit next to progr
 				Char4speech.text = "";
         }
 		 else if (primeInt == 101){
+			 ArtChar2.SetActive(false);
+                ArtChar7.SetActive(true);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "";
                 Char2speech.text = "ughh I don’t feel so good...";
@@ -254,6 +266,8 @@ public void talking(){         // main story function. Players hit next to progr
 				Char4speech.text = "";
         }
        else if (primeInt == 102){
+		   ArtChar7.SetActive(false);
+                ArtChar8.SetActive(true);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "";
                 Char2speech.text = "Ughh...";
@@ -268,6 +282,8 @@ public void talking(){         // main story function. Players hit next to progr
         }
 
        else if (primeInt == 200){
+		   ArtChar1.SetActive(false);
+                ArtChar2.SetActive(true);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "";
                 Char2speech.text = "*eats red berries*";
@@ -276,6 +292,8 @@ public void talking(){         // main story function. Players hit next to progr
 				Char4speech.text = "";
         }
 		else if (primeInt == 201){
+			ArtChar2.SetActive(false);
+                ArtChar1.SetActive(true);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Wow! These are amazing!!";
                 Char2speech.text = "";
