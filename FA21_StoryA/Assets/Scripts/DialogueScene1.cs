@@ -15,6 +15,7 @@ public class DialogueScene1 : MonoBehaviour {
         //public Text Char3speech;
         public GameObject dialogue;
         public GameObject ArtChar1;
+		public GameObject ArtChar2;
         public GameObject ArtBG1;
         public GameObject Choice1a;
         public GameObject Choice1b;
@@ -33,6 +34,7 @@ void Start(){         // initial visibility settings
         dialogue.SetActive(false);
 		StartCoroutine(FadeIn(ArtChar1));
         ArtChar1.SetActive(true);
+		ArtChar2.SetActive(false);
 		StartCoroutine(FadeIn(ArtBG1));
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
@@ -68,6 +70,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
         else if (primeInt == 2){
                ArtChar1.SetActive(true);
+			   ArtChar2.SetActive(false);
                 dialogue.SetActive(true);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "I need to find Mama.";
@@ -95,7 +98,8 @@ public void talking(){         // main story function. Players hit next to progr
 			    }
 	   }
 			 else if (primeInt == 11){
-                ArtChar1.SetActive(true);
+                ArtChar2.SetActive(true);
+				ArtChar1.SetActive(false);
                 dialogue.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "The river is now shallow enough to cross!";
@@ -110,6 +114,8 @@ public void talking(){         // main story function. Players hit next to progr
 
        else if (primeInt == 100){
                 Char1name.text = "BABY PLATYPUS";
+				 ArtChar2.SetActive(true);
+				ArtChar1.SetActive(false);
                 Char1speech.text = "Here I come Mama!";
                 nextButton.SetActive(false);
                 allowSpace = false;
@@ -117,6 +123,8 @@ public void talking(){         // main story function. Players hit next to progr
         }
 
        else if (primeInt == 200){
+		    ArtChar2.SetActive(true);
+				ArtChar1.SetActive(false);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Here I come Mama!";
 				nextButton.SetActive(false);
@@ -124,6 +132,8 @@ public void talking(){         // main story function. Players hit next to progr
                 NextScene2Button.SetActive(true);
         }
        else if (primeInt == 300){
+		    ArtChar2.SetActive(true);
+				ArtChar1.SetActive(false);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Here I come Mama!";
                 nextButton.SetActive(false);
@@ -131,6 +141,8 @@ public void talking(){         // main story function. Players hit next to progr
                 NextScene3Button.SetActive(true);
         }
 		else if (primeInt == 400){
+			 ArtChar2.SetActive(true);
+				ArtChar1.SetActive(false);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Here I come Mama!";
                 nextButton.SetActive(false);
