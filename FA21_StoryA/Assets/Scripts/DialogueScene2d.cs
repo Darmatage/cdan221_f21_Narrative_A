@@ -211,7 +211,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "OWL";
-                Char2speech.text = "No problem! And watch out for that shaking bush over there...never know what could be hiding in there”";
+                Char2speech.text = "No problem! And watch out for that shaking bush over there...never know what could be hiding in there";
                 nextButton.SetActive(false);
                 allowSpace = false;
                 NextScene1Button.SetActive(true);
