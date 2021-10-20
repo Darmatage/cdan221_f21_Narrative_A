@@ -25,13 +25,15 @@ public class DialogueScene1 : MonoBehaviour {
 		public GameObject NextScene3Button;
         public GameObject NextScene4Button; //still to add
         public GameObject nextButton;
-       //public GameHandler gameHandler;
+        public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
 
 void Start(){         // initial visibility settings
         dialogue.SetActive(false);
-        ArtChar1.SetActive(false);
+		StartCoroutine(FadeIn(ArtChar1));
+        ArtChar1.SetActive(true);
+		StartCoroutine(FadeIn(ArtBG1));
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -42,6 +44,13 @@ void Start(){         // initial visibility settings
 		NextScene3Button.SetActive(false);
         NextScene4Button.SetActive(false);
         nextButton.SetActive(true);
+		
+		if (gameHandler.isBear() || gameHandler.isFox()){
+			if (!gameHandler.isNewDiscovery()){
+				    primeInt = 10;
+			}
+			    }
+		 
    }
 
 void Update(){         // use spacebar as Next button
@@ -60,51 +69,80 @@ public void talking(){         // main story function. Players hit next to progr
         else if (primeInt == 2){
                ArtChar1.SetActive(true);
                 dialogue.SetActive(true);
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "I need to find Mama.";
                 
         }
        else if (primeInt ==3){
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = " Where should I look?";
 				// Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
-                Choice1a.SetActive(true); // function Choice1aFunct()
-                Choice1b.SetActive(true); // function Choice1bFunct()
-				Choice1c.SetActive(true);
+				
+				if (!gameHandler.isFox() || !gameHandler.isBear()){
+					Choice1a.SetActive(true);
+				}
+				
+                if (!gameHandler.isRabbit()){
+					Choice1b.SetActive(true);
+				}
                 
-        }
+				Choice1c.SetActive(true);
+				
+				if (gameHandler.isBear() || gameHandler.isFox()){
+				    Choice1d.SetActive(true);
+			    }
+	   }
+			 else if (primeInt == 11){
+                ArtChar1.SetActive(true);
+                dialogue.SetActive(true);
+                Char1name.text = "";
+                Char1speech.text = "The river is now shallow enough to cross!";
+				gameHandler.UpdateNewDiscovery();
+				primeInt = 1;
+                }
+						
+                
+        
       
 // ENCOUNTER AFTER CHOICE #1
 
        else if (primeInt == 100){
-                Char1name.text = "Baby Platypus";
-                Char1speech.text = "Let's follow the footprints!";
+                Char1name.text = "BABY PLATYPUS";
+                Char1speech.text = "Here I come Mama!";
                 nextButton.SetActive(false);
                 allowSpace = false;
                 NextScene1Button.SetActive(true);
         }
 
        else if (primeInt == 200){
-                Char1name.text = "Baby Platypus";
-                Char1speech.text = "Let's go to the bush.";
+                Char1name.text = "BABY PLATYPUS";
+                Char1speech.text = "Here I come Mama!";
 				nextButton.SetActive(false);
 				allowSpace = false;
                 NextScene2Button.SetActive(true);
         }
        else if (primeInt == 300){
-                Char1name.text = "Baby Platypus";
-                Char1speech.text = "Let's go to the tree hole";
+                Char1name.text = "BABY PLATYPUS";
+                Char1speech.text = "Here I come Mama!";
                 nextButton.SetActive(false);
                 allowSpace = false;
                 NextScene3Button.SetActive(true);
         }
+		else if (primeInt == 400){
+                Char1name.text = "BABY PLATYPUS";
+                Char1speech.text = "Here I come Mama!";
+                nextButton.SetActive(false);
+                allowSpace = false;
+                NextScene4Button.SetActive(true);
+        }
      }
+	 
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
         public void Choice1aFunct(){
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Let's follow the footprints!";
                 primeInt = 99;
                 Choice1a.SetActive(false);
@@ -115,7 +153,7 @@ public void talking(){         // main story function. Players hit next to progr
                 allowSpace = true;
         }
         public void Choice1bFunct(){
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Let's go to the bush.";
                 primeInt = 199;
                 Choice1a.SetActive(false);
@@ -126,9 +164,20 @@ public void talking(){         // main story function. Players hit next to progr
                 allowSpace = true;
         }
 		public void Choice1cFunct(){
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Let's go to the tree hole";
                 primeInt = 299;
+                Choice1a.SetActive(false);
+                Choice1b.SetActive(false);
+				Choice1c.SetActive(false);
+				Choice1d.SetActive(false);
+                nextButton.SetActive(true);
+                allowSpace = true;
+        }
+		public void Choice1dFunct(){
+                Char1name.text = "BABY PLATYPUS";
+                Char1speech.text = "Let's go across the river";
+                primeInt = 399;
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
 				Choice1c.SetActive(false);
@@ -145,4 +194,29 @@ public void talking(){         // main story function. Players hit next to progr
 		 public void SceneChange3(){
                 SceneManager.LoadScene("Scene2d");
         }
+		public void SceneChange4(){
+                SceneManager.LoadScene("Scene2e");
+        }
+ IEnumerator FadeIn(GameObject fadeImage){
+                float alphaLevel = 0;
+                fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                for(int i = 0; i < 100; i++){
+                        alphaLevel += 0.01f;
+                        yield return null;
+                        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                        Debug.Log("Alpha is: " + alphaLevel);
+                }
+        }
+
+        IEnumerator FadeOut(GameObject fadeImage){
+                float alphaLevel = 1;
+                fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                for(int i = 0; i < 100; i++){
+                        alphaLevel -= 0.01f;
+                        yield return null;
+                        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                        Debug.Log("Alpha is: " + alphaLevel);
+                }
+        }
+		
 }

@@ -8,9 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 7ed0520934b0d4878bd185fa0431387b
-  - enabled: 0
-    path: 
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Scene_Win1.unity
     guid: 28d3bcb88d4ddad4d9c42e63846bc03a
@@ -50,4 +47,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene4b.unity
     guid: 09ed43f585db2c44097b44c26342ade7
+  - enabled: 1
+    path: Assets/Scenes/Scene2e.unity
+    guid: 206598262f72ca44e8f7b4ef3fa1618f
+  - enabled: 1
+    path: Assets/Scenes/Scene4c.unity
+    guid: 2883061c7c5dcf64999b820351dbbc59
+  - enabled: 1
+    path: Assets/Scenes/Scene3c.unity
+    guid: 674cf21c735abd54e8246cce4117c03f
+  - enabled: 1
+    path: Assets/Scenes/Pre_Scene.unity
+    guid: b2b67237e9ed5ce47a65e14787f17a75
   m_configObjects: {}

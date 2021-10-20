@@ -22,14 +22,16 @@ public class DialogueScene4a : MonoBehaviour {
         public GameObject NextScene1Button;
         public GameObject NextScene2Button;
         public GameObject nextButton;
-       //public GameHandler gameHandler;
-        public AudioSource audioSource;
+       public GameHandler gameHandler;
+        //public AudioSource audioSource;
         private bool allowSpace = true;
 
 void Start(){         // initial visibility settings
         dialogue.SetActive(false);
         ArtChar1.SetActive(false);
-		ArtChar2.SetActive(false);
+		StartCoroutine(FadeIn(ArtChar2));
+		ArtChar2.SetActive(true);
+		StartCoroutine(FadeIn(ArtBG1));
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -54,20 +56,20 @@ public void talking(){         // main story function. Players hit next to progr
         else if (primeInt == 2){
                 ArtChar2.SetActive(true);
                 dialogue.SetActive(true);
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "There seems to be some scratches on the cave walls…";
         }
        else if (primeInt ==3){
 				ArtChar2.SetActive(false);
 				ArtChar1.SetActive(true);
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "And I can hear growling!";
         }
        else if (primeInt == 4){
 		   
                 ArtChar1.SetActive(false);
 				ArtChar2.SetActive(true);
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Should I keep going?";
                 nextButton.SetActive(false);
                 allowSpace = false;
@@ -77,7 +79,7 @@ public void talking(){         // main story function. Players hit next to progr
 // ENCOUNTER AFTER CHOICE #1
   
        else if (primeInt == 100){
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "I'll keep going!";
                 nextButton.SetActive(false);
                 allowSpace = false;
@@ -85,7 +87,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 
        else if (primeInt == 200){
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Let's turn back...";
                 nextButton.SetActive(false);
                 allowSpace = false;
@@ -97,7 +99,7 @@ public void talking(){         // main story function. Players hit next to progr
         public void Choice1aFunct(){
 				ArtChar2.SetActive(false);
 				ArtChar1.SetActive(true);
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "I'll keep going!";
                 primeInt = 99;
                 Choice1a.SetActive(false);
@@ -108,7 +110,7 @@ public void talking(){         // main story function. Players hit next to progr
         public void Choice1bFunct(){
                ArtChar2.SetActive(false);
 				ArtChar1.SetActive(true);
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Let's turn back...";
                 primeInt = 199;
                 Choice1a.SetActive(false);
@@ -122,5 +124,26 @@ public void talking(){         // main story function. Players hit next to progr
         }
         public void SceneChange2(){
                 SceneManager.LoadScene("Scene1");
+        }
+		 IEnumerator FadeIn(GameObject fadeImage){
+                float alphaLevel = 0;
+                fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                for(int i = 0; i < 100; i++){
+                        alphaLevel += 0.01f;
+                        yield return null;
+                        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                        Debug.Log("Alpha is: " + alphaLevel);
+                }
+        }
+
+        IEnumerator FadeOut(GameObject fadeImage){
+                float alphaLevel = 1;
+                fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                for(int i = 0; i < 100; i++){
+                        alphaLevel -= 0.01f;
+                        yield return null;
+                        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                        Debug.Log("Alpha is: " + alphaLevel);
+                }
         }
 }

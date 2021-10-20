@@ -22,14 +22,14 @@ public class DialogueScene2a : MonoBehaviour {
         public GameObject NextScene1Button;
         public GameObject NextScene2Button;
         public GameObject nextButton;
-       //public GameHandler gameHandler;
-        public AudioSource audioSource;
+        public GameHandler gameHandler;
+        //public AudioSource audioSource;
         private bool allowSpace = true;
 
 void Start(){         // initial visibility settings
 		
         dialogue.SetActive(false);
-        ArtChar1.SetActive(false);
+        ArtChar1.SetActive(true);
 		ArtChar2.SetActive(false);
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
@@ -37,6 +37,10 @@ void Start(){         // initial visibility settings
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
+		
+		if (gameHandler.isBear() || gameHandler.isFox()){
+			primeInt = 4;
+		}
    }
 
 void Update(){         // use spacebar as Next button
@@ -56,7 +60,7 @@ public void talking(){         // main story function. Players hit next to progr
 				ArtChar1.SetActive(true);
                 dialogue.SetActive(true);
 				Char2speech.text = "";
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Mama?";
                 
         }
@@ -72,19 +76,32 @@ public void talking(){         // main story function. Players hit next to progr
                Char2speech.text = "The footprints on the left look much bigger than the footprints on the right.";
         }
        else if (primeInt == 5){
+		   ArtChar1.SetActive(false);
+		   ArtChar2.SetActive(true);
+		  if (!gameHandler.isBear() && !gameHandler.isFox()){
 				Char1speech.text = "";
                 Char2speech.text = "Which footprints should I follow?";
+		  }
+		   if (gameHandler.isBear() || gameHandler.isFox()){
+			   dialogue.SetActive(true);
+				Char1speech.text = "";
+                Char2speech.text = "Back here again...";
+		  }
 				// Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
                 allowSpace = false;
-                Choice1a.SetActive(true); // function Choice1aFunct()
+				if (gameHandler.isBear() == false){
+			   Choice1a.SetActive(true); // function Choice1aFunct()
+		}
+                 if (gameHandler.isFox()== false){
                 Choice1b.SetActive(true); // function Choice1bFunct()
+				 }
 
         }
 // ENCOUNTER AFTER CHOICE #1
        else if (primeInt == 100){
 				Char1speech.text = "";
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char2speech.text = "";
 				nextButton.SetActive(false);
                 allowSpace = false;
@@ -94,7 +111,7 @@ public void talking(){         // main story function. Players hit next to progr
 
        else if (primeInt == 200){
                 Char1speech.text = "";
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char2speech.text = "";
 				nextButton.SetActive(false);
                 allowSpace = false;
@@ -108,7 +125,7 @@ public void talking(){         // main story function. Players hit next to progr
 				ArtChar2.SetActive(false);
 				ArtChar1.SetActive(true);
                 Char1speech.text = "";
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char2speech.text = "Let's follow the bigger footprints then!";
                 primeInt = 99;
                 Choice1a.SetActive(false);
@@ -120,7 +137,7 @@ public void talking(){         // main story function. Players hit next to progr
 				ArtChar2.SetActive(false);
 				ArtChar1.SetActive(true);
                 Char1speech.text = "";
-                Char1name.text = "Baby Platypus";
+                Char1name.text = "BABY PLATYPUS";
                 Char2speech.text = "Let's follow the smaller footprints then!";
                 primeInt = 199;
                 Choice1a.SetActive(false);
