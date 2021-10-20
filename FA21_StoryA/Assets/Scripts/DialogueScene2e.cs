@@ -442,7 +442,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 		else if (primeInt == 307){
 			    ArtMama4.SetActive(true);
-				ArtPlat1.SetActive(false);
+				ArtPlat5.SetActive(false);
                 BabyPlatname.text = "";
                 BabyPlatspeech.text = "";
 				BabyPlatthoughts.text = "";
