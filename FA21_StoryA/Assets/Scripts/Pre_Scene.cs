@@ -19,6 +19,9 @@ public class Pre_Scene : MonoBehaviour {
 		public GameObject ArtBG7;
 		public GameObject ArtBG8;
 		public GameObject ArtChar1;
+		public GameObject ArtChar2;
+		public GameObject ArtChar3;
+		public GameObject ArtChar4;
         public GameObject nextButton;
         public GameHandler gameHandler;
        //public AudioSource audioSource;
@@ -36,6 +39,9 @@ void Start(){         // initial visibility settings
 		ArtBG7.SetActive(false);
 		ArtBG8.SetActive(false);
 		ArtChar1.SetActive(false);
+		ArtChar2.SetActive(false);
+		ArtChar3.SetActive(false);
+		ArtChar4.SetActive(false);
         nextButton.SetActive(true);
    }
 
@@ -97,28 +103,35 @@ public void talking(){         // main story function. Players hit next to progr
 		        StartCoroutine(FadeIn(ArtBG8));
 		        ArtBG8.SetActive(true);
 				ArtBG7.SetActive(false);
-				 StartCoroutine(FadeIn(ArtChar1));
-				ArtChar1.SetActive(true);
+				 StartCoroutine(FadeIn(ArtChar2));
+				ArtChar2.SetActive(true);
                 Char1speech.text = "...";
                 
         }
 		else if (primeInt == 11){
+			
                 Char1speech.text = "Where am I...?";
                 
         }
 		
 		else if (primeInt == 12){
+			ArtChar2.SetActive(false);
+			ArtChar4.SetActive(true);
                 Char1speech.text = "More importantly...?";
                 
         }
         
 		else if (primeInt == 13){
+			ArtChar4.SetActive(false);
+			ArtChar1.SetActive(true);
                 Char1speech.text = "Where's Mama?";
                 
         }
 		
 	
 		else if (primeInt == 14){
+			ArtChar1.SetActive(false);
+			ArtChar3.SetActive(true);
                 Char1speech.text = "Maybe I can look for clues to find her.";
                 
         }
