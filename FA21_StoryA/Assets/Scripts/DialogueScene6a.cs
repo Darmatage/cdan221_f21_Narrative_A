@@ -150,7 +150,7 @@ public void talking(){         // main story function. Players hit next to progr
                 float alphaLevel = 0;
                 fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
                 for(int i = 0; i < 100; i++){
-                        alphaLevel += 0.1f;
+                        alphaLevel += 0.01f;
                         yield return null;
                         fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
                         Debug.Log("Alpha is: " + alphaLevel);
@@ -161,7 +161,7 @@ public void talking(){         // main story function. Players hit next to progr
                 float alphaLevel = 1;
                 fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
                 for(int i = 0; i < 100; i++){
-                        alphaLevel -= 0.1f;
+                        alphaLevel -= 0.01f;
                         yield return null;
                         fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
                         Debug.Log("Alpha is: " + alphaLevel);

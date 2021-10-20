@@ -26,6 +26,7 @@ public class Pre_Scene : MonoBehaviour {
 
 void Start(){         // initial visibility settings
         dialogue.SetActive(false);
+		StartCoroutine(FadeIn(ArtBG1));
         ArtBG1.SetActive(true);
 		ArtBG2.SetActive(false);
 		ArtBG3.SetActive(false);
@@ -54,30 +55,37 @@ public void talking(){         // main story function. Players hit next to progr
         }
        
        else if (primeInt ==2){
+		   StartCoroutine(FadeIn(ArtBG2));
                 ArtBG2.SetActive(true);
 				ArtBG1.SetActive(false);
         }
        else if (primeInt == 3){
+		   StartCoroutine(FadeIn(ArtBG3));
                 ArtBG3.SetActive(true);
 				ArtBG2.SetActive(false);
         }
        else if (primeInt == 4){
+		   StartCoroutine(FadeIn(ArtBG4));
                 ArtBG4.SetActive(true);
 				ArtBG3.SetActive(false);
         }
        else if (primeInt == 5){
+		   StartCoroutine(FadeIn(ArtBG5));
                 ArtBG5.SetActive(true);
 				ArtBG4.SetActive(false);
         }
        else if (primeInt ==6){
+		   StartCoroutine(FadeIn(ArtBG6));
                 ArtBG6.SetActive(true);
 				ArtBG5.SetActive(false);
         }
 		 else if (primeInt ==7){
+			 StartCoroutine(FadeIn(ArtBG7));
                 ArtBG7.SetActive(true);
 				ArtBG6.SetActive(false);
         }
        else if (primeInt == 8){
+		   
 		        dialogue.SetActive(true);
                 Char1speech.text = "Mama?";
 	   }
@@ -86,8 +94,10 @@ public void talking(){         // main story function. Players hit next to progr
                 
         }
        else if (primeInt == 10){
+		        StartCoroutine(FadeIn(ArtBG8));
 		        ArtBG8.SetActive(true);
 				ArtBG7.SetActive(false);
+				 StartCoroutine(FadeIn(ArtChar1));
 				ArtChar1.SetActive(true);
                 Char1speech.text = "...";
                 
@@ -140,6 +150,26 @@ public void talking(){         // main story function. Players hit next to progr
                SceneManager.LoadScene("Scene1");
         }
 		
-      
+        IEnumerator FadeIn(GameObject fadeImage){
+                float alphaLevel = 0;
+                fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                for(int i = 0; i < 100; i++){
+                        alphaLevel += 0.01f;
+                        yield return null;
+                        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                        Debug.Log("Alpha is: " + alphaLevel);
+                }
+        }
+
+        IEnumerator FadeOut(GameObject fadeImage){
+                float alphaLevel = 1;
+                fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                for(int i = 0; i < 100; i++){
+                        alphaLevel -= 0.01f;
+                        yield return null;
+                        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                        Debug.Log("Alpha is: " + alphaLevel);
+                }
+        }
 		
 }
