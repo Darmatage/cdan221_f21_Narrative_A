@@ -117,28 +117,14 @@ public void talking(){         // main story function. Players hit next to progr
                 
         }
 		
+	
 		else if (primeInt == 14){
-                Char1speech.text = "Hmm, It seems the river has flooded too much to cross at the moment.";
-                
-        }
-		else if (primeInt == 15){
                 Char1speech.text = "Maybe I can look for clues to find her.";
                 
         }
 		
-		else if (primeInt == 16){
-                Char1speech.text = "There are some footprints over there.";
-                
-        }
-		else if (primeInt == 17){
-                Char1speech.text = "And a shaking bush!";
-                
-        }
-		else if (primeInt == 18){
-                Char1speech.text = "I also hear something from that treehole over there.";
-                
-        }
-		else if (primeInt == 19){
+		
+		else if (primeInt == 15){
                 Char1speech.text = "";
 				SceneChange1();
                 
