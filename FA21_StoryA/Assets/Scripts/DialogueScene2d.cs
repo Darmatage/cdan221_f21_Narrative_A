@@ -16,6 +16,12 @@ public class DialogueScene2d : MonoBehaviour {
         public GameObject dialogue;
         public GameObject ArtChar1;
         public GameObject ArtChar2;
+		public GameObject ArtChar3;
+        public GameObject ArtChar4;
+		public GameObject ArtChar5;
+        public GameObject ArtChar6;
+		public GameObject ArtChar7;
+        public GameObject ArtChar8;
         public GameObject ArtBG1;
         public GameObject Choice1a;
         public GameObject Choice1b;
@@ -30,6 +36,12 @@ void Start(){         // initial visibility settings
         dialogue.SetActive(false);
         ArtChar1.SetActive(true);
         ArtChar2.SetActive(false);
+		ArtChar3.SetActive(false);
+		ArtChar4.SetActive(false);
+		ArtChar5.SetActive(false);
+		ArtChar6.SetActive(false);
+		ArtChar7.SetActive(false);
+		ArtChar8.SetActive(false);
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -57,7 +69,8 @@ public void talking(){         // main story function. Players hit next to progr
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-               ArtChar1.SetActive(true);
+               ArtChar6.SetActive(true);
+			   ArtChar1.SetActive(false);
                 dialogue.SetActive(true);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "A tree hole?";
@@ -65,6 +78,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "";
         }
        else if (primeInt ==3){
+		   ArtChar1.SetActive(true);
+			   ArtChar6.SetActive(false);
 		       // AudioSource.Play();
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "There's snoring coming from inside!";
@@ -74,6 +89,8 @@ public void talking(){         // main story function. Players hit next to progr
         }
 
        else if (primeInt == 4){
+		        ArtChar6.SetActive(true);
+			   ArtChar1.SetActive(false);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Should I wake up the sleeping creature?";
                 Char2name.text = "";
@@ -88,8 +105,9 @@ public void talking(){         // main story function. Players hit next to progr
 		
 		//been to owl
 		else if (primeInt == 40){
+			
 			    ArtChar1.SetActive(false);
-			    ArtChar2.SetActive(true);
+			    ArtChar5.SetActive(true);
                 dialogue.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -98,6 +116,8 @@ public void talking(){         // main story function. Players hit next to progr
         }
 		
 		else if (primeInt == 41){
+			ArtChar5.SetActive(false);
+			    ArtChar3.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "OWL";
@@ -109,8 +129,7 @@ public void talking(){         // main story function. Players hit next to progr
 		
 		
 // ENCOUNTER AFTER CHOICE #1
-       else if (primeInt == 100){
-               ArtChar1.SetActive(true);
+       else if (primeInt == 100){   
                 dialogue.SetActive(true);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "H-hello? Is anyone up there?";
@@ -118,8 +137,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "";
         }
        else if (primeInt ==101){
-                ArtChar1.SetActive(false);
-                ArtChar2.SetActive(true);
+                ArtChar5.SetActive(true);
+			   ArtChar7.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "OWL";
@@ -127,83 +146,87 @@ public void talking(){         // main story function. Players hit next to progr
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 102){
+		    ArtChar3.SetActive(true);
+			   ArtChar5.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "OWL";
                 Char2speech.text = "Oh, hello down there! I didn't expect company today, but I must say, why so glum chum?";
         }
        else if (primeInt == 103){
-                ArtChar1.SetActive(true);
-                ArtChar2.SetActive(false);
+                ArtChar8.SetActive(true);
+                ArtChar3.SetActive(false);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "I'm trying to find my Mama, we got seperated because of the storm last night...";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt == 104){
-                ArtChar1.SetActive(false);
-                ArtChar2.SetActive(true);
+                ArtChar4.SetActive(true);
+                ArtChar8.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "OWL";
                 Char2speech.text = "Oh my goodness you poor thing! To be that little and lost, especially after a storm, no wonder you're upset!";
         }
-       else if (primeInt ==105){
-                ArtChar1.SetActive(true);
-                ArtChar2.SetActive(false);
+       else if (primeInt == 105){
+                ArtChar7.SetActive(true);
+                ArtChar4.SetActive(false);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "You haven't seen my Mama anywhere have you?!";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt == 106){
-		        ArtChar2.SetActive(true);
-                ArtChar1.SetActive(false);
+		        ArtChar4.SetActive(true);
+                ArtChar7.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "OWL";
                 Char2speech.text = "I'm sorry but no...you see I'm a very heavy sleeper, I can sleep through almost anything. I slept through that whole storm last night until just now.";
 	   }
 	   else if (primeInt == 107){
-		        ArtChar1.SetActive(true);
-                ArtChar2.SetActive(false);
+		        ArtChar8.SetActive(true);
+                ArtChar4.SetActive(false);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Oh no...well, I’m really sorry for waking you Mister Owl…";
                 Char2name.text = "";
                 Char2speech.text = "";
 	   }
 	    else if (primeInt == 108){
-		        ArtChar2.SetActive(true);
-                ArtChar1.SetActive(false);
+		        ArtChar3.SetActive(true);
+                ArtChar8.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "OWL";
                 Char2speech.text = "Oh don’t worry about it! In fact, I should be thanking you! I almost slept through breakfast!";
 	   }
 	   else if (primeInt == 109){  //this is where you can finish the script copy and paste and add 1 to prime int
-                ArtChar2.SetActive(true);
-                ArtChar1.SetActive(false);
+                ArtChar5.SetActive(true);
+                ArtChar3.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "OWL";
                 Char2speech.text = "By the way I must warn you!";
 	   }
 	   else if (primeInt == 110){  //this is where you can finish the script copy and paste and add 1 to prime int
-
+				ArtChar4.SetActive(true);
+                ArtChar5.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "OWL";
                 Char2speech.text = "Beware of the snakes in this forest!";
 	   } 
 	   else if (primeInt == 111){  //this is where you can finish the script copy and paste and add 1 to prime int
-
+				
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "OWL";
                 Char2speech.text = "They love to come out and hunt for food after a storm, especially after one like last night.";
 	   }
      else if (primeInt == 112){  
- 
+				ArtChar3.SetActive(true);
+                ArtChar4.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "OWL";
@@ -218,8 +241,8 @@ public void talking(){         // main story function. Players hit next to progr
     } 
 	
     else if (primeInt == 114){ 
-                ArtChar1.SetActive(true);
-                ArtChar2.SetActive(false);
+                ArtChar8.SetActive(true);
+                ArtChar3.SetActive(false);
                  Char1name.text = "BABY PLATYPUS";
                  Char1speech.text = "*Gulp* Thank you for the warning Mister Owl...I'll remember what you said.";
                  Char2name.text = "";
@@ -228,7 +251,7 @@ public void talking(){         // main story function. Players hit next to progr
 
 	    else if (primeInt == 115){ //this will be your last line
 		            ArtChar2.SetActive(true);
-                ArtChar1.SetActive(false);
+                ArtChar8.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "OWL";
@@ -252,6 +275,8 @@ public void talking(){         // main story function. Players hit next to progr
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
         public void Choice1aFunct(){
+			ArtChar7.SetActive(true);
+			   ArtChar6.SetActive(false);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "AHHHHHHHHHHHHHHHHHHH";
                 Char2name.text = "";
@@ -264,6 +289,8 @@ public void talking(){         // main story function. Players hit next to progr
 				gameHandler.UpdateOwl();
         }
         public void Choice1bFunct(){
+			ArtChar7.SetActive(true);
+			   ArtChar6.SetActive(false);
                 Char1name.text = "BABY PLATYPUS";
                 Char1speech.text = "Nah, I'll let them sleep...";
                 Char2name.text = "";
