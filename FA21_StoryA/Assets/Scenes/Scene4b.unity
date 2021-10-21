@@ -347,7 +347,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HEAD BACK TO FORREST
+  m_Text: HEAD BACK TO FOREST
 --- !u!222 &205623546
 CanvasRenderer:
   m_ObjectHideFlags: 0
