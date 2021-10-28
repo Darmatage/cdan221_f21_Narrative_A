@@ -188,7 +188,7 @@ public void talking(){         // main story function. Players hit next to progr
 				ArtBG2.SetActive(false);
 				ArtBG1.SetActive(true);
                 Char1name.text = "BABY PLATYPUS";
-                Char1speech.text = "HOW COULD YOU POSSIBLE FORGET SOMETHING SO IMPORTANT!!!";
+                Char1speech.text = "HOW COULD YOU POSSIBLY FORGET SOMETHING SO IMPORTANT!!!";
                 Char2speech.text = "";
 				Char2name.text = "";
 				Char3speech.text = "";

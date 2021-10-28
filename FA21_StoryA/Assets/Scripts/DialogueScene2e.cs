@@ -135,7 +135,7 @@ public void talking(){         // main story function. Players hit next to progr
                 ArtPlat5.SetActive(true);
                BabyPlatname.text = "BABY PLATYPUS";
                 BabyPlatspeech.text = "";
-				BabyPlatthoughts.text = "That snake look super dangerous...";
+				BabyPlatthoughts.text = "That snake looks super dangerous...";
 				MamaPlatname.text = "";
                 MamaPlatspeech.text = "";
 				Snakename.text = "";
